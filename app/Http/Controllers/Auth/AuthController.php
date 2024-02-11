@@ -56,4 +56,12 @@ class AuthController extends Controller
 
         return redirect()->route('home');
     }
+
+    public function logout()
+    {
+        \Auth::logout();
+        \Session::flush();
+
+        return redirect()->route('home');
+    }
 }
