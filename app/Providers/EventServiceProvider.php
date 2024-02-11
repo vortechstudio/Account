@@ -6,6 +6,9 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Event;
+use SocialiteProviders\Auth0\Auth0ExtendSocialite;
+use SocialiteProviders\Google\GoogleExtendSocialite;
+use SocialiteProviders\Manager\SocialiteWasCalled;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -18,6 +21,14 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        SocialiteWasCalled::class => [
+            \SocialiteProviders\Facebook\FacebookExtendSocialite::class.'@handle',
+            GoogleExtendSocialite::class.'@handle',
+            \SocialiteProviders\Steam\SteamExtendSocialite::class.'@handle',
+            \SocialiteProviders\Battlenet\BattlenetExtendSocialite::class.'@handle',
+            \SocialiteProviders\Discord\DiscordExtendSocialite::class.'@handle',
+            \SocialiteProviders\Twitch\TwitchExtendSocialite::class.'@handle',
+        ]
     ];
 
     /**
