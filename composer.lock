@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d8043f094dc23d2d1d0a395a58c2b198",
+    "content-hash": "04bd7516d12a5e2edd7e6999adcca3a0",
     "packages": [
         {
             "name": "brick/math",
@@ -1319,6 +1319,62 @@
             "time": "2024-01-30T16:25:02+00:00"
         },
         {
+            "name": "laravel/legacy-factories",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/legacy-factories.git",
+                "reference": "6cb79f668fc36b8b396ada1da3ba45867889c30f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/legacy-factories/zipball/6cb79f668fc36b8b396ada1da3ba45867889c30f",
+                "reference": "6cb79f668fc36b8b396ada1da3ba45867889c30f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/macroable": "^8.0|^9.0|^10.0|^11.0",
+                "php": "^7.3|^8.0",
+                "symfony/finder": "^3.4|^4.0|^5.0|^6.0|^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Illuminate\\Database\\Eloquent\\LegacyFactoryServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "helpers.php"
+                ],
+                "psr-4": {
+                    "Illuminate\\Database\\Eloquent\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The legacy version of the Laravel Eloquent factories.",
+            "homepage": "http://laravel.com",
+            "support": {
+                "issues": "https://github.com/laravel/framework/issues",
+                "source": "https://github.com/laravel/framework"
+            },
+            "time": "2024-01-15T13:55:14+00:00"
+        },
+        {
             "name": "laravel/prompts",
             "version": "v0.1.15",
             "source": {
@@ -1500,6 +1556,76 @@
                 "source": "https://github.com/laravel/serializable-closure"
             },
             "time": "2023-11-08T14:08:06+00:00"
+        },
+        {
+            "name": "laravel/socialite",
+            "version": "v5.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/socialite.git",
+                "reference": "4f6a8af6f3f7c18da03d19842dd0514315501c10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/socialite/zipball/4f6a8af6f3f7c18da03d19842dd0514315501c10",
+                "reference": "4f6a8af6f3f7c18da03d19842dd0514315501c10",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^6.0|^7.0",
+                "illuminate/contracts": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
+                "illuminate/http": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
+                "illuminate/support": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
+                "league/oauth1-client": "^1.10.1",
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "^4.0|^5.0|^6.0|^7.0|^8.0|^9.0",
+                "phpstan/phpstan": "^1.10",
+                "phpunit/phpunit": "^8.0|^9.3|^10.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Socialite\\SocialiteServiceProvider"
+                    ],
+                    "aliases": {
+                        "Socialite": "Laravel\\Socialite\\Facades\\Socialite"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Socialite\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel wrapper around OAuth 1 & OAuth 2 libraries.",
+            "homepage": "https://laravel.com",
+            "keywords": [
+                "laravel",
+                "oauth"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/socialite/issues",
+                "source": "https://github.com/laravel/socialite"
+            },
+            "time": "2023-12-02T18:22:36+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1962,6 +2088,82 @@
             "time": "2024-01-28T23:22:08+00:00"
         },
         {
+            "name": "league/oauth1-client",
+            "version": "v1.10.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/oauth1-client.git",
+                "reference": "d6365b901b5c287dd41f143033315e2f777e1167"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/oauth1-client/zipball/d6365b901b5c287dd41f143033315e2f777e1167",
+                "reference": "d6365b901b5c287dd41f143033315e2f777e1167",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-openssl": "*",
+                "guzzlehttp/guzzle": "^6.0|^7.0",
+                "guzzlehttp/psr7": "^1.7|^2.0",
+                "php": ">=7.1||>=8.0"
+            },
+            "require-dev": {
+                "ext-simplexml": "*",
+                "friendsofphp/php-cs-fixer": "^2.17",
+                "mockery/mockery": "^1.3.3",
+                "phpstan/phpstan": "^0.12.42",
+                "phpunit/phpunit": "^7.5||9.5"
+            },
+            "suggest": {
+                "ext-simplexml": "For decoding XML-based responses."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev",
+                    "dev-develop": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\OAuth1\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Corlett",
+                    "email": "bencorlett@me.com",
+                    "homepage": "http://www.webcomm.com.au",
+                    "role": "Developer"
+                }
+            ],
+            "description": "OAuth 1.0 Client Library",
+            "keywords": [
+                "Authentication",
+                "SSO",
+                "authorization",
+                "bitbucket",
+                "identity",
+                "idp",
+                "oauth",
+                "oauth1",
+                "single sign on",
+                "trello",
+                "tumblr",
+                "twitter"
+            ],
+            "support": {
+                "issues": "https://github.com/thephpleague/oauth1-client/issues",
+                "source": "https://github.com/thephpleague/oauth1-client/tree/v1.10.1"
+            },
+            "time": "2022-04-15T14:02:14+00:00"
+        },
+        {
             "name": "livewire/livewire",
             "version": "v3.4.4",
             "source": {
@@ -2035,6 +2237,75 @@
                 }
             ],
             "time": "2024-01-28T19:07:11+00:00"
+        },
+        {
+            "name": "matomo/device-detector",
+            "version": "6.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/matomo-org/device-detector.git",
+                "reference": "19138b0c4b9ddf4ffd8e423d6af3764b7317cb0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/matomo-org/device-detector/zipball/19138b0c4b9ddf4ffd8e423d6af3764b7317cb0b",
+                "reference": "19138b0c4b9ddf4ffd8e423d6af3764b7317cb0b",
+                "shasum": ""
+            },
+            "require": {
+                "mustangostang/spyc": "*",
+                "php": "^7.2|^8.0"
+            },
+            "replace": {
+                "piwik/device-detector": "self.version"
+            },
+            "require-dev": {
+                "matthiasmullie/scrapbook": "^1.4.7",
+                "mayflower/mo4-coding-standard": "^v9.0.0",
+                "phpstan/phpstan": "^1.10.44",
+                "phpunit/phpunit": "^8.5.8",
+                "psr/cache": "^1.0.1",
+                "psr/simple-cache": "^1.0.1",
+                "symfony/yaml": "^5.1.7"
+            },
+            "suggest": {
+                "doctrine/cache": "Can directly be used for caching purpose",
+                "ext-yaml": "Necessary for using the Pecl YAML parser"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DeviceDetector\\": ""
+                },
+                "exclude-from-classmap": [
+                    "Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "The Matomo Team",
+                    "email": "hello@matomo.org",
+                    "homepage": "https://matomo.org/team/"
+                }
+            ],
+            "description": "The Universal Device Detection library, that parses User Agents and detects devices (desktop, tablet, mobile, tv, cars, console, etc.), clients (browsers, media players, mobile apps, feed readers, libraries, etc), operating systems, devices, brands and models.",
+            "homepage": "https://matomo.org",
+            "keywords": [
+                "devicedetection",
+                "parser",
+                "useragent"
+            ],
+            "support": {
+                "forum": "https://forum.matomo.org/",
+                "issues": "https://github.com/matomo-org/device-detector/issues",
+                "source": "https://github.com/matomo-org/matomo",
+                "wiki": "https://dev.matomo.org/"
+            },
+            "time": "2024-01-05T09:03:21+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2136,6 +2407,126 @@
                 }
             ],
             "time": "2023-10-27T15:32:31+00:00"
+        },
+        {
+            "name": "multicaret/laravel-acquaintances",
+            "version": "v3.5.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/multicaret/laravel-acquaintances.git",
+                "reference": "8e7781450e7be150ec0864577bee843148330b93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/multicaret/laravel-acquaintances/zipball/8e7781450e7be150ec0864577bee843148330b93",
+                "reference": "8e7781450e7be150ec0864577bee843148330b93",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "^0.3.2",
+                "doctrine/dbal": "^2.5",
+                "fzaninotto/faker": "~1.4",
+                "laravel/laravel": "5.*|^9.0|^10.0",
+                "mockery/mockery": "1.0.x-dev",
+                "phpunit/phpunit": "5.*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Multicaret\\Acquaintances\\AcquaintancesServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Multicaret\\Acquaintances\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mohamed Kawsara",
+                    "email": "mkwsra@gmail.com"
+                }
+            ],
+            "description": "This light package, with no dependencies, gives Eloquent models the ability to manage friendships (with groups). And interactions such as: Likes, favorites, votes, subscribe, follow, ..etc. And it includes advanced rating system.",
+            "keywords": [
+                "Followers",
+                "Rate",
+                "Rating",
+                "eloquent",
+                "followships",
+                "friend-system",
+                "friends",
+                "friendships",
+                "interactions",
+                "laravel",
+                "like",
+                "social-media",
+                "wish-list"
+            ],
+            "support": {
+                "issues": "https://github.com/multicaret/laravel-acquaintances/issues",
+                "source": "https://github.com/multicaret/laravel-acquaintances/tree/v3.5.9"
+            },
+            "time": "2023-11-28T17:10:45+00:00"
+        },
+        {
+            "name": "mustangostang/spyc",
+            "version": "0.6.3",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:mustangostang/spyc.git",
+                "reference": "4627c838b16550b666d15aeae1e5289dd5b77da0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mustangostang/spyc/zipball/4627c838b16550b666d15aeae1e5289dd5b77da0",
+                "reference": "4627c838b16550b666d15aeae1e5289dd5b77da0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.3.*@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.5.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Spyc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "mustangostang",
+                    "email": "vlad.andersen@gmail.com"
+                }
+            ],
+            "description": "A simple YAML loader/dumper class for PHP",
+            "homepage": "https://github.com/mustangostang/spyc/",
+            "keywords": [
+                "spyc",
+                "yaml",
+                "yml"
+            ],
+            "time": "2019-09-10T13:16:29+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -2535,6 +2926,629 @@
                 }
             ],
             "time": "2023-02-08T01:06:31+00:00"
+        },
+        {
+            "name": "pharaonic/laravel-agents-detector",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Pharaonic/laravel-agents-detector.git",
+                "reference": "95a1b8c424c4337d4a4be48ae85a9af5b02dac24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Pharaonic/laravel-agents-detector/zipball/95a1b8c424c4337d4a4be48ae85a9af5b02dac24",
+                "reference": "95a1b8c424c4337d4a4be48ae85a9af5b02dac24",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=6.0",
+                "matomo/device-detector": ">=4.3.0",
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Pharaonic\\Laravel\\Agents\\AgentsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Helpers/Agent.php"
+                ],
+                "psr-4": {
+                    "Pharaonic\\Laravel\\Agents\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moamen Eltouny (Raggi)",
+                    "email": "raggi@raggitech.com"
+                }
+            ],
+            "description": "Laravel Agents (Devices, Operation Systems, Browsers, Bots).",
+            "keywords": [
+                "laravel",
+                "laravel agents",
+                "laravel bots",
+                "laravel browsers",
+                "laravel devices",
+                "laravel operation system",
+                "laravel os",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/Pharaonic/laravel-agents-detector/issues",
+                "source": "https://github.com/Pharaonic/laravel-agents-detector/tree/1.0.3"
+            },
+            "funding": [
+                {
+                    "url": "https://liberapay.com/Pharaonic",
+                    "type": "liberapay"
+                },
+                {
+                    "url": "https://www.patreon.com/Pharaonic",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2021-08-14T07:37:56+00:00"
+        },
+        {
+            "name": "pharaonic/laravel-categorizable",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Pharaonic/laravel-categorizable.git",
+                "reference": "20ec6df92d928aab81a68232c1e88c0cd0cff84b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Pharaonic/laravel-categorizable/zipball/20ec6df92d928aab81a68232c1e88c0cd0cff84b",
+                "reference": "20ec6df92d928aab81a68232c1e88c0cd0cff84b",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=6.0",
+                "pharaonic/laravel-sluggable": ">=1.0",
+                "pharaonic/laravel-translatable": ">=1.0",
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Pharaonic\\Laravel\\Categorizable\\CategorizableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pharaonic\\Laravel\\Categorizable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moamen Eltouny (Raggi)",
+                    "email": "raggi@raggitech.com"
+                }
+            ],
+            "description": "Model Categorizable Management.",
+            "keywords": [
+                "Laravel Categorizable",
+                "categorizable",
+                "laravel",
+                "php",
+                "php categorizable"
+            ],
+            "support": {
+                "issues": "https://github.com/Pharaonic/laravel-categorizable/issues",
+                "source": "https://github.com/Pharaonic/laravel-categorizable/tree/1.1.0"
+            },
+            "time": "2023-10-14T04:19:56+00:00"
+        },
+        {
+            "name": "pharaonic/laravel-helpers",
+            "version": "2.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Pharaonic/laravel-helpers.git",
+                "reference": "ca103af33fc2d910b1ce94e2332fcb0cf64e3403"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Pharaonic/laravel-helpers/zipball/ca103af33fc2d910b1ce94e2332fcb0cf64e3403",
+                "reference": "ca103af33fc2d910b1ce94e2332fcb0cf64e3403",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=6.0",
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Helpers.php"
+                ],
+                "psr-4": {
+                    "Pharaonic\\Laravel\\Helpers\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raggi",
+                    "email": "support@pharaonic.io",
+                    "homepage": "https://pharaonic.io"
+                }
+            ],
+            "description": "Laravel - Classes, Traits, Functions",
+            "keywords": [
+                "helpers",
+                "laravel",
+                "pharaonic",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/Pharaonic/laravel-helpers/issues",
+                "source": "https://github.com/Pharaonic/laravel-helpers/tree/2.4.3"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/Pharaonic",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2021-12-25T07:53:06+00:00"
+        },
+        {
+            "name": "pharaonic/laravel-modulator",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Pharaonic/laravel-modulator.git",
+                "reference": "97e3461dc99a9239bf4de1ee84cb4f0b35dec5bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Pharaonic/laravel-modulator/zipball/97e3461dc99a9239bf4de1ee84cb4f0b35dec5bf",
+                "reference": "97e3461dc99a9239bf4de1ee84cb4f0b35dec5bf",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=8.0",
+                "php": ">=7.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Pharaonic\\Laravel\\Modulator\\ModulatorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Pharaonic\\Laravel\\Modulator\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moamen Eltouny (Raggi)",
+                    "email": "raggi@raggitech.com"
+                }
+            ],
+            "description": "Laravel Modulator (HMVC) Creator in an easy and simple way.",
+            "keywords": [
+                "laravel",
+                "laravel Modules",
+                "laravel hmvc",
+                "laravel modulator",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/Pharaonic/laravel-modulator/issues",
+                "source": "https://github.com/Pharaonic/laravel-modulator/tree/1.4.0"
+            },
+            "time": "2024-02-05T21:46:24+00:00"
+        },
+        {
+            "name": "pharaonic/laravel-pages",
+            "version": "1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Pharaonic/laravel-pages.git",
+                "reference": "c4566c34116755187f1b842222c00ce241348492"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Pharaonic/laravel-pages/zipball/c4566c34116755187f1b842222c00ce241348492",
+                "reference": "c4566c34116755187f1b842222c00ce241348492",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=8.0",
+                "pharaonic/laravel-helpers": "*",
+                "pharaonic/laravel-sluggable": "*",
+                "pharaonic/laravel-translatable": "*",
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Pharaonic\\Laravel\\Pages\\PagesServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Helpers.php"
+                ],
+                "psr-4": {
+                    "Pharaonic\\Laravel\\Pages\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moamen Eltouny (Raggi)",
+                    "email": "raggi@raggitech.com"
+                }
+            ],
+            "description": "Laravel - Pages & Model's Pages",
+            "keywords": [
+                "laravel",
+                "laravel pages",
+                "pages",
+                "php",
+                "php pages"
+            ],
+            "support": {
+                "issues": "https://github.com/Pharaonic/laravel-pages/issues",
+                "source": "https://github.com/Pharaonic/laravel-pages/tree/1.2.2"
+            },
+            "time": "2022-04-02T10:14:33+00:00"
+        },
+        {
+            "name": "pharaonic/laravel-settings",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Pharaonic/laravel-settings.git",
+                "reference": "9187e89677581c2bd4da901e69e0e4bd86207724"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Pharaonic/laravel-settings/zipball/9187e89677581c2bd4da901e69e0e4bd86207724",
+                "reference": "9187e89677581c2bd4da901e69e0e4bd86207724",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=6.0",
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Pharaonic\\Laravel\\Settings\\SettingsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Pharaonic\\Laravel\\Settings\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moamen Eltouny (Raggi)",
+                    "email": "raggi@raggitech.com"
+                }
+            ],
+            "description": "Store and retrieve settings generally or for model objects in Laravel.",
+            "keywords": [
+                "Settings",
+                "info",
+                "laravel",
+                "laravel settings",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/Pharaonic/laravel-settings/issues",
+                "source": "https://github.com/Pharaonic/laravel-settings/tree/1.2.0"
+            },
+            "time": "2022-12-14T16:38:59+00:00"
+        },
+        {
+            "name": "pharaonic/laravel-sluggable",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Pharaonic/laravel-sluggable.git",
+                "reference": "ecab76a30f0dda390baef7518b99dbe7cd0e3012"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Pharaonic/laravel-sluggable/zipball/ecab76a30f0dda390baef7518b99dbe7cd0e3012",
+                "reference": "ecab76a30f0dda390baef7518b99dbe7cd0e3012",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "laravel/framework": ">=6.0",
+                "pharaonic/php-slugify": ">=1.0",
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Pharaonic\\Laravel\\Sluggable\\SluggableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pharaonic\\Laravel\\Sluggable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moamen Eltouny",
+                    "email": "raggi@pharaonic.io"
+                }
+            ],
+            "description": "Simplest Sluggable for Laravel Eloquent/Model",
+            "keywords": [
+                "eloquent",
+                "laravel",
+                "model",
+                "php",
+                "slug",
+                "sluggable"
+            ],
+            "support": {
+                "issues": "https://github.com/Pharaonic/laravel-sluggable/issues",
+                "source": "https://github.com/Pharaonic/laravel-sluggable/tree/1.0.4"
+            },
+            "funding": [
+                {
+                    "url": "https://liberapay.com/Pharaonic",
+                    "type": "liberapay"
+                },
+                {
+                    "url": "https://www.patreon.com/Pharaonic",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2022-03-08T17:27:28+00:00"
+        },
+        {
+            "name": "pharaonic/laravel-taggable",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Pharaonic/laravel-taggable.git",
+                "reference": "103dd08e24ff741daddb04d435fc3dff689deb12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Pharaonic/laravel-taggable/zipball/103dd08e24ff741daddb04d435fc3dff689deb12",
+                "reference": "103dd08e24ff741daddb04d435fc3dff689deb12",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=6.0",
+                "pharaonic/laravel-translatable": ">=1.0",
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Pharaonic\\Laravel\\Taggable\\TaggableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pharaonic\\Laravel\\Taggable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moamen Eltouny (Raggi)",
+                    "email": "raggi@raggitech.com"
+                }
+            ],
+            "description": "Model Taggable Management.",
+            "keywords": [
+                "Laravel Taggable",
+                "Taggable",
+                "laravel",
+                "php",
+                "php Taggable"
+            ],
+            "support": {
+                "issues": "https://github.com/Pharaonic/laravel-taggable/issues",
+                "source": "https://github.com/Pharaonic/laravel-taggable/tree/1.0.3"
+            },
+            "funding": [
+                {
+                    "url": "https://liberapay.com/Pharaonic",
+                    "type": "liberapay"
+                },
+                {
+                    "url": "https://www.patreon.com/Pharaonic",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2022-02-10T20:19:56+00:00"
+        },
+        {
+            "name": "pharaonic/laravel-translatable",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Pharaonic/laravel-translatable.git",
+                "reference": "cd7179ee1e92d5b5ff355b8d114e2f08b9e008e1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Pharaonic/laravel-translatable/zipball/cd7179ee1e92d5b5ff355b8d114e2f08b9e008e1",
+                "reference": "cd7179ee1e92d5b5ff355b8d114e2f08b9e008e1",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=6.0",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0||^5.0||^6.0",
+                "pharaonic/laravel-sluggable": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Pharaonic\\Laravel\\Translatable\\TranslatableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pharaonic\\Laravel\\Translatable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moamen Eltouny",
+                    "email": "raggi@pharaonic.io"
+                }
+            ],
+            "description": "Simplest Translatable for Laravel Eloquent/Model",
+            "keywords": [
+                "eloquent",
+                "languages",
+                "laravel",
+                "model",
+                "multilingual",
+                "php",
+                "translate",
+                "translation",
+                "translations"
+            ],
+            "support": {
+                "issues": "https://github.com/Pharaonic/laravel-translatable/issues",
+                "source": "https://github.com/Pharaonic/laravel-translatable/tree/2.0.0"
+            },
+            "time": "2022-03-02T07:57:27+00:00"
+        },
+        {
+            "name": "pharaonic/php-slugify",
+            "version": "1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Pharaonic/php-slugify.git",
+                "reference": "a7d59972d19e2f9c7c73a627d83ec4144d33be98"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Pharaonic/php-slugify/zipball/a7d59972d19e2f9c7c73a627d83ec4144d33be98",
+                "reference": "a7d59972d19e2f9c7c73a627d83ec4144d33be98",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Helpers.php"
+                ],
+                "psr-4": {
+                    "Pharaonic\\Slugify\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moamen Eltouny",
+                    "email": "raggi@pharaonic.io"
+                }
+            ],
+            "description": "Simplest Slugify for PHP",
+            "keywords": [
+                "php",
+                "slug",
+                "sluggable",
+                "slugify"
+            ],
+            "support": {
+                "issues": "https://github.com/Pharaonic/php-slugify/issues",
+                "source": "https://github.com/Pharaonic/php-slugify/tree/1.2"
+            },
+            "funding": [
+                {
+                    "url": "https://liberapay.com/Pharaonic",
+                    "type": "liberapay"
+                },
+                {
+                    "url": "https://www.patreon.com/Pharaonic",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2021-10-21T14:23:31+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -3103,6 +4117,81 @@
             "time": "2023-12-20T15:28:09+00:00"
         },
         {
+            "name": "qoraiche/laravel-mail-editor",
+            "version": "v4.1.0-beta.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Qoraiche/laravel-mail-editor.git",
+                "reference": "71b83900292591c558f22bc825b29257bfd4b968"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Qoraiche/laravel-mail-editor/zipball/71b83900292591c558f22bc825b29257bfd4b968",
+                "reference": "71b83900292591c558f22bc825b29257bfd4b968",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^9.0|^10.0",
+                "laravel/legacy-factories": "^1.3",
+                "reecem/mocker": "^1.1"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4.4",
+                "orchestra/testbench": "^7.0",
+                "phpunit/phpunit": "^9.5.10",
+                "sempro/phpunit-pretty-print": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Qoraiche\\MailEclipse\\MailEclipseServiceProvider"
+                    ],
+                    "aliases": {
+                        "MailEclipse": "Qoraiche\\MailEclipse\\Facades\\MailEclipse"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Qoraiche\\MailEclipse\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "yassine qoraiche",
+                    "email": "qoraicheofficiel@hotmail.com",
+                    "homepage": "https://github.com/qoraiche"
+                }
+            ],
+            "description": "Laravel Mailable Editor",
+            "homepage": "https://github.com/Qoraiche/laravel-mail-editor",
+            "keywords": [
+                "laravel",
+                "laravel-mail",
+                "laravel-mailable",
+                "mailEclipse",
+                "mailable",
+                "mailable-editor",
+                "markdown"
+            ],
+            "support": {
+                "issues": "https://github.com/Qoraiche/laravel-mail-editor/issues",
+                "source": "https://github.com/Qoraiche/laravel-mail-editor/tree/v4.1.0-beta.0"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/streamaps",
+                    "type": "custom"
+                }
+            ],
+            "time": "2023-04-03T13:27:17+00:00"
+        },
+        {
             "name": "ralouphie/getallheaders",
             "version": "3.0.3",
             "source": {
@@ -3328,17 +4417,86 @@
             "time": "2023-11-08T05:53:05+00:00"
         },
         {
-            "name": "salahhusa9/laravel-updater",
-            "version": "v1.0.1",
+            "name": "reecem/mocker",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/salahhusa9/laravel-updater.git",
-                "reference": "705485c97efaa161da81b3cc825e2b20c1f43d6f"
+                "url": "https://github.com/ReeceM/mocker.git",
+                "reference": "e51ad25f2ef6e13a427fde06552e64955f4dc3e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/salahhusa9/laravel-updater/zipball/705485c97efaa161da81b3cc825e2b20c1f43d6f",
-                "reference": "705485c97efaa161da81b3cc825e2b20c1f43d6f",
+                "url": "https://api.github.com/repos/ReeceM/mocker/zipball/e51ad25f2ef6e13a427fde06552e64955f4dc3e1",
+                "reference": "e51ad25f2ef6e13a427fde06552e64955f4dc3e1",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/filesystem": "^5.6|^6.0|^7.0|^8.0|^9.0|^10.0",
+                "illuminate/support": "^5.6|^6.0|^7.0|^8.0|^9.0|^10.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.5|^4.0|^7.0",
+                "phpunit/phpunit": "^7.5|^8.0|^9.5.10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ReeceM\\Mocker\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ReeceM",
+                    "email": "zsh.rce@gmail.com",
+                    "homepage": "https://githib.com/reecem"
+                }
+            ],
+            "description": "Mock class constructor args based on the reflection class",
+            "homepage": "https://github.com/reecem/mocker",
+            "keywords": [
+                "helper",
+                "laravel",
+                "mocker",
+                "mockery",
+                "reecem",
+                "testing"
+            ],
+            "support": {
+                "issues": "https://github.com/ReeceM/mocker/issues",
+                "source": "https://github.com/ReeceM/mocker/tree/v1.2.1"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/iexistin3d",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/reecem",
+                    "type": "github"
+                },
+                {
+                    "url": "https://ko-fi.com/reecem",
+                    "type": "ko_fi"
+                }
+            ],
+            "time": "2023-04-03T13:19:00+00:00"
+        },
+        {
+            "name": "salahhusa9/laravel-updater",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/salahhusa9/laravel-updater.git",
+                "reference": "73654062394e90cd1d846973e78fd50ee6ebe4ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/salahhusa9/laravel-updater/zipball/73654062394e90cd1d846973e78fd50ee6ebe4ed",
+                "reference": "73654062394e90cd1d846973e78fd50ee6ebe4ed",
                 "shasum": ""
             },
             "require": {
@@ -3400,7 +4558,7 @@
             ],
             "support": {
                 "issues": "https://github.com/salahhusa9/laravel-updater/issues",
-                "source": "https://github.com/salahhusa9/laravel-updater/tree/v1.0.1"
+                "source": "https://github.com/salahhusa9/laravel-updater/tree/v1.0.2"
             },
             "funding": [
                 {
@@ -3408,7 +4566,304 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-02-03T15:11:37+00:00"
+            "time": "2024-02-10T11:20:04+00:00"
+        },
+        {
+            "name": "socialiteproviders/battlenet",
+            "version": "4.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SocialiteProviders/Battle.net.git",
+                "reference": "d25066c1b061a430a4f289e89599a5c07fa0b463"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SocialiteProviders/Battle.net/zipball/d25066c1b061a430a4f289e89599a5c07fa0b463",
+                "reference": "d25066c1b061a430a4f289e89599a5c07fa0b463",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.2 || ^8.0",
+                "socialiteproviders/manager": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SocialiteProviders\\Battlenet\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anand Capur",
+                    "email": "github@anand.io"
+                }
+            ],
+            "description": "Battlenet OAuth2 Provider for Laravel Socialite",
+            "support": {
+                "source": "https://github.com/SocialiteProviders/Battle.net/tree/4.1.1"
+            },
+            "time": "2021-03-16T01:16:54+00:00"
+        },
+        {
+            "name": "socialiteproviders/discord",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SocialiteProviders/Discord.git",
+                "reference": "c71c379acfdca5ba4aa65a3db5ae5222852a919c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SocialiteProviders/Discord/zipball/c71c379acfdca5ba4aa65a3db5ae5222852a919c",
+                "reference": "c71c379acfdca5ba4aa65a3db5ae5222852a919c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.4 || ^8.0",
+                "socialiteproviders/manager": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SocialiteProviders\\Discord\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christopher Eklund",
+                    "email": "eklundchristopher@gmail.com"
+                }
+            ],
+            "description": "Discord OAuth2 Provider for Laravel Socialite",
+            "keywords": [
+                "discord",
+                "laravel",
+                "oauth",
+                "provider",
+                "socialite"
+            ],
+            "support": {
+                "docs": "https://socialiteproviders.com/discord",
+                "issues": "https://github.com/socialiteproviders/providers/issues",
+                "source": "https://github.com/socialiteproviders/providers"
+            },
+            "time": "2023-07-24T23:28:47+00:00"
+        },
+        {
+            "name": "socialiteproviders/facebook",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SocialiteProviders/Facebook.git",
+                "reference": "9b94a9334b5d0f61de8f5a20928d63d4d8f4e00d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SocialiteProviders/Facebook/zipball/9b94a9334b5d0f61de8f5a20928d63d4d8f4e00d",
+                "reference": "9b94a9334b5d0f61de8f5a20928d63d4d8f4e00d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.2 || ^8.0",
+                "socialiteproviders/manager": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SocialiteProviders\\Facebook\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oleksandr Prypkhan (Alex Wells)",
+                    "email": "autaut03@googlemail.com"
+                }
+            ],
+            "description": "Facebook (facebook.com) OAuth2 Provider for Laravel Socialite",
+            "support": {
+                "source": "https://github.com/SocialiteProviders/Facebook/tree/4.1.0"
+            },
+            "time": "2020-12-01T23:10:59+00:00"
+        },
+        {
+            "name": "socialiteproviders/google",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SocialiteProviders/Google-Plus.git",
+                "reference": "1cb8f6fb2c0dd0fc8b34e95f69865663fdf0b401"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SocialiteProviders/Google-Plus/zipball/1cb8f6fb2c0dd0fc8b34e95f69865663fdf0b401",
+                "reference": "1cb8f6fb2c0dd0fc8b34e95f69865663fdf0b401",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.2 || ^8.0",
+                "socialiteproviders/manager": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SocialiteProviders\\Google\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "xstoop",
+                    "email": "myenglishnameisx@gmail.com"
+                }
+            ],
+            "description": "Google OAuth2 Provider for Laravel Socialite",
+            "support": {
+                "source": "https://github.com/SocialiteProviders/Google-Plus/tree/4.1.0"
+            },
+            "time": "2020-12-01T23:10:59+00:00"
+        },
+        {
+            "name": "socialiteproviders/manager",
+            "version": "v4.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SocialiteProviders/Manager.git",
+                "reference": "df5e45b53d918ec3d689f014d98a6c838b98ed96"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SocialiteProviders/Manager/zipball/df5e45b53d918ec3d689f014d98a6c838b98ed96",
+                "reference": "df5e45b53d918ec3d689f014d98a6c838b98ed96",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0",
+                "laravel/socialite": "~5.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.2",
+                "phpunit/phpunit": "^6.0 || ^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "SocialiteProviders\\Manager\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SocialiteProviders\\Manager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andy Wendt",
+                    "email": "andy@awendt.com"
+                },
+                {
+                    "name": "Anton Komarev",
+                    "email": "a.komarev@cybercog.su"
+                },
+                {
+                    "name": "Miguel Piedrafita",
+                    "email": "soy@miguelpiedrafita.com"
+                },
+                {
+                    "name": "atymic",
+                    "email": "atymicq@gmail.com",
+                    "homepage": "https://atymic.dev"
+                }
+            ],
+            "description": "Easily add new or override built-in providers in Laravel Socialite.",
+            "homepage": "https://socialiteproviders.com",
+            "keywords": [
+                "laravel",
+                "manager",
+                "oauth",
+                "providers",
+                "socialite"
+            ],
+            "support": {
+                "issues": "https://github.com/socialiteproviders/manager/issues",
+                "source": "https://github.com/socialiteproviders/manager"
+            },
+            "time": "2023-08-27T23:46:34+00:00"
+        },
+        {
+            "name": "socialiteproviders/steam",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SocialiteProviders/Steam.git",
+                "reference": "922f82a26fb7243d7e7ff2ec8ba7e957e7b9eeb7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SocialiteProviders/Steam/zipball/922f82a26fb7243d7e7ff2ec8ba7e957e7b9eeb7",
+                "reference": "922f82a26fb7243d7e7ff2ec8ba7e957e7b9eeb7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.2 || ^8.0",
+                "socialiteproviders/manager": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SocialiteProviders\\Steam\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christopher Eklund",
+                    "email": "eklundchristopher@gmail.com"
+                }
+            ],
+            "description": "Steam OpenID Provider for Laravel Socialite",
+            "keywords": [
+                "OpenId",
+                "laravel",
+                "provider",
+                "socialite",
+                "steam"
+            ],
+            "support": {
+                "docs": "https://socialiteproviders.com/steam",
+                "issues": "https://github.com/socialiteproviders/providers/issues",
+                "source": "https://github.com/socialiteproviders/providers"
+            },
+            "time": "2022-03-28T22:38:40+00:00"
         },
         {
             "name": "spatie/laravel-package-tools",
@@ -8189,16 +9644,16 @@
         },
         {
             "name": "spatie/laravel-ignition",
-            "version": "2.4.1",
+            "version": "2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-ignition.git",
-                "reference": "005e1e7b1232f3b22d7e7be3f602693efc7dba67"
+                "reference": "351504f4570e32908839fc5a2dc53bf77d02f85e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/005e1e7b1232f3b22d7e7be3f602693efc7dba67",
-                "reference": "005e1e7b1232f3b22d7e7be3f602693efc7dba67",
+                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/351504f4570e32908839fc5a2dc53bf77d02f85e",
+                "reference": "351504f4570e32908839fc5a2dc53bf77d02f85e",
                 "shasum": ""
             },
             "require": {
@@ -8277,7 +9732,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-12T13:14:58+00:00"
+            "time": "2024-02-09T16:08:40+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -8403,7 +9858,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "qoraiche/laravel-mail-editor": 10
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
