@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware(["auth"])->group(function () {
-    Route::get('/', function () {
-        return view('welcome');
-    })->name('home');
+    Route::get('/', \App\Livewire\Home::class)->name('home');
+});
+Route::get('/test', function () {
+    dd(Socialite::driver(auth()->user()->socials()->first()->provider));
 });
 
 Route::prefix('auth')->as('auth.')->group(function () {

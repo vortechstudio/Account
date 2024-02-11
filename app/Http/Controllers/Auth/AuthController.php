@@ -47,6 +47,7 @@ class AuthController extends Controller
                 $user->socials()->create([
                     "provider" => $provider,
                     "provider_id" => $gUser->id,
+                    'avatar' => $gUser->avatar,
                     "user_id" => $user->id
                 ]);
             }
