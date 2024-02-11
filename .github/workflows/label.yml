@@ -1,0 +1,19 @@
+name: Labeler
+on:
+    pull_request:
+        types: [opened]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: actions/labeler@v5
+        with:
+          repo-token: "${{ secrets.ACCESS_TOKEN }}"

@@ -1,0 +1,29 @@
+name: FlowFailures
+on:
+  workflow_run:
+    workflows: ['CloseIssues', 'CreateTag', 'CodeStyle', 'Labeler', 'UpdatePR', 'Release', 'Changelog']  # Remplacez par le nom de votre workflow principal
+    types:
+      - completed
+jobs:
+  create-issue:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - name: Create Issue
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{secrets.ACCESS_TOKEN}}
+          script: |
+            const title = 'Échec du Workflow: ' + context.payload.workflow_run.name;
+            const body = 'Un workflow a échoué. Veuillez vérifier les détails :
+
+            - Workflow: ' + context.payload.workflow_run.name + '
+            - Événement: ' + context.payload.workflow_run.event + '
+            - ID: ' + context.payload.workflow_run.id + '
+            - URL: ' + context.payload.workflow_run.html_url;
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: title,
+              body: body
+            });
