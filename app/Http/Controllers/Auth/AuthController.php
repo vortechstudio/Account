@@ -26,6 +26,7 @@ class AuthController extends Controller
             "battlenet" => $this->verifyUser($user, "battlenet"),
             "discord" => $this->verifyUser($user, "discord"),
             "facebook" => $this->verifyUser($user, "facebook"),
+            "twitch" => $this->verifyUser($user, 'twitch')
         };
     }
 
@@ -42,10 +43,13 @@ class AuthController extends Controller
                 "admin" => false
             ]);
 
-            $user->socials()->create([
-                "provider" => $provider,
-                "provider_id" => $gUser->id
-            ]);
+            if(!$user->socials()->where('provider', $provider)->exists()) {
+                $user->socials()->create([
+                    "provider" => $provider,
+                    "provider_id" => $gUser->id,
+                    "user_id" => $user->id
+                ]);
+            }
         }
 
         \Auth::login($user);

@@ -115,6 +115,13 @@
                                 </a>
                                 <!--end::Google link=-->
                             </div>
+                            <div class="col-md-12">
+                                <!--begin::Google link=-->
+                                <a href="{{ route('auth.redirect', 'twitch') }}" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
+                                    <img alt="Logo" src="{{ asset('/media/svg/brand-logos/twitch.svg') }}" class="h-15px me-3" />Connexion avec Twitch
+                                </a>
+                                <!--end::Google link=-->
+                            </div>
                             <!--end::Col-->
                         </div>
                         <!--end::Login options-->
