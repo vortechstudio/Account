@@ -63,11 +63,11 @@
             <!--end:Menu sub-->
         </div>
         <!--end:Menu item-->
-        <span class="menu-item here me-0 me-lg-2">
-                        <a href="" class="menu-link">
-                            <span class="menu-title">Centre de support</span>
-                        </a>
-                    </span>
+        <span class="menu-item me-0 me-lg-2">
+            <a href="" class="menu-link">
+                <span class="menu-title">Centre de support</span>
+            </a>
+        </span>
     </div>
     <!--end::Menu-->
 </div>

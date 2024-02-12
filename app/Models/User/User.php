@@ -60,6 +60,10 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    protected $appends = [
+        'otp_status'
+    ];
+
     public function logs()
     {
         return $this->hasMany(UserLog::class);
@@ -109,6 +113,15 @@ class User extends Authenticatable
     public function socials()
     {
         return $this->hasMany(UserSocial::class);
+    }
+
+    public function getOtpStatusAttribute()
+    {
+        if($this->otp) {
+            return '<i class="fa-solid fa-check-circle fs-2 text-success me-2"></i> Actif';
+        } else {
+            return '<i class="fa-solid fa-xmark-circle fs-2 text-danger me-2"></i> Inactif';
+        }
     }
 
     public function createAccessToken($name, $abilities = ['*'])
