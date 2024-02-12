@@ -23,6 +23,7 @@
         <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1" id="kt_app_header_wrapper">
             @include('components.layouts.includes.menu')
             <!--begin::Navbar-->
+            @auth()
             <div class="app-navbar flex-shrink-0">
                 <!--begin::User menu-->
                 <div class="app-navbar-item" id="kt_header_user_menu_toggle">
@@ -67,6 +68,7 @@
                 <!--begin::Header menu toggle-->
                 <!--end::Header menu toggle-->
             </div>
+            @endauth
             <!--end::Navbar-->
         </div>
         <!--end::Header wrapper-->

@@ -43,6 +43,7 @@
                     <!--begin::Content wrapper-->
                     <div class="d-flex flex-column flex-column-fluid">
                         <!--begin::Toolbar-->
+                        @auth()
                         <div id="kt_app_toolbar" class="app-toolbar bg-opacity-25 bg-dark w-100" style="background: transparent">
                             <x-base.background-animated />
                             <!--begin::Toolbar container-->
@@ -119,6 +120,7 @@
                             </div>
                             <!--end::Toolbar container-->
                         </div>
+                        @endauth
                         <!--end::Toolbar-->
                         <!--begin::Content-->
                         <div id="kt_app_content" class="app-content pt-10 bg-white">
@@ -157,6 +159,7 @@
         </div>
         <!--end::Page-->
     </div>
+
     <!--end::App-->
     <!--begin::Scrolltop-->
     <div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User\User;
+use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
 
 class AuthController extends Controller
@@ -51,6 +52,8 @@ class AuthController extends Controller
                     "user_id" => $user->id
                 ]);
             }
+
+            return redirect()->route('auth.setup-register', [$provider, $user->email]);
         }
 
         \Auth::login($user);
@@ -64,5 +67,22 @@ class AuthController extends Controller
         \Session::flush();
 
         return redirect()->route('home');
+    }
+
+    public function confirmPasswordForm()
+    {
+        return view('auth.password');
+    }
+
+    public function confirmPassword(Request $request)
+    {
+        if(!\Hash::check($request->password, $request->user()->password)) {
+            toastr()
+                ->addError("Mot de passe erronée", "Vérification d'accès !");
+        }
+
+        $request->session()->passwordConfirmed();
+
+        return redirect()->intended();
     }
 }
