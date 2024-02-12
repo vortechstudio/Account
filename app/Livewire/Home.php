@@ -2,14 +2,40 @@
 
 namespace App\Livewire;
 
+use App\Enums\Social\ArticleTypeEnum;
+use App\Models\Social\Article;
 use Livewire\Attributes\Title;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Home extends Component
 {
+    use WithPagination;
+    public $news;
+    public $limit = 5;
+
+    public function mount()
+    {
+        $this->news = Article::with('author', 'cercle')
+            ->where('type', ArticleTypeEnum::SSO)
+            ->where('published', true)
+            ->get();
+    }
+    public function loadMore()
+    {
+        $this->limit += 5;
+    }
+
     #[Title("Bienvenue")]
     public function render()
     {
-        return view('livewire.home')->layout('components.layouts.app');
+        $news = Article::with('author', 'cercle')
+            ->where('type', ArticleTypeEnum::SSO)
+            ->where('published', true)
+            ->paginate($this->limit);
+        //dd($this->news);
+        return view('livewire.home', [
+            "articles" => $news
+        ])->layout('components.layouts.app');
     }
 }
