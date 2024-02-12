@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(["auth"])->group(function () {
+Route::middleware(["auth", "agent"])->group(function () {
     Route::get('/', \App\Livewire\Home::class)->name('home');
 });
 Route::get('/test', function () {
