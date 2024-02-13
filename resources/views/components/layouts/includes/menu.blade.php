@@ -18,7 +18,7 @@
             <!--begin:Menu sub-->
             <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-200px">
                 <div class="menu-item">
-                    <a class="menu-link" href="" wire:navigate>
+                    <a class="menu-link" href="{{ route('account.app') }}" wire:navigate>
                         <span class="menu-title">Informations de compte</span>
                     </a>
                 </div>

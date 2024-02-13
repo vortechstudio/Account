@@ -16,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(["auth", "agent"])->group(function () {
     Route::get('/', \App\Livewire\Home::class)->name('home');
 });
+
+Route::middleware(["auth"])->group(function () {
+    Route::prefix('account')->as('account.')->middleware(["password.confirm"])->group(function () {
+        Route::get('/', \App\Livewire\Account\App::class)->name('app');
+    });
+});
 Route::get('/test', function () {
     dd(Socialite::driver(auth()->user()->socials()->first()->provider));
 });
@@ -26,12 +32,12 @@ Route::prefix('auth')->as('auth.')->group(function () {
     Route::get('{provider}/callback', [\App\Http\Controllers\Auth\AuthController::class, 'callback'])->name('callback');
     Route::get('{provider}/setup/{email}', \App\Livewire\Auth\SetupRegister::class)->name('setup-register');
     Route::get('logout', [\App\Http\Controllers\Auth\AuthController::class, 'logout'])->name('logout');
-
-    Route::get('password-confirm', [\App\Http\Controllers\Auth\AuthController::class, 'confirmPasswordForm'])
-        ->name('confirm-password-form')
-        ->middleware('auth');
-
     Route::post('password-confirm', [\App\Http\Controllers\Auth\AuthController::class, 'confirmPassword'])
         ->name('confirm-password')
         ->middleware(["auth", "throttle:6,1"]);
 });
+
+Route::get('password-confirm', [\App\Http\Controllers\Auth\AuthController::class, 'confirmPasswordForm'])
+    ->name('password.confirm')
+    ->middleware('auth');
+

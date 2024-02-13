@@ -83,6 +83,8 @@
                             <!--begin::Col-->
                             <div class="col">
                                 <x-form.input
+                                    label="Confirmer votre accès"
+                                    placeholder="Tapez votre mot de passe"
                                     type="password"
                                     name="password"
                                     required="true" />

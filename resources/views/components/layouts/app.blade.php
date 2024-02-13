@@ -174,5 +174,6 @@
     <!--begin::Global Javascript Bundle(mandatory for all pages)-->
     <script src="{{ asset('/plugins/global/plugins.bundle.js') }}"></script>
     <script src="{{ asset('/js/scripts.bundle.js') }}"></script>
+    <x-livewire-alert::scripts />
     </body>
 </html>
