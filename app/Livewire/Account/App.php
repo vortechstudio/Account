@@ -36,6 +36,9 @@ class App extends Component
         auth()->user()->update([
             "password" => \Hash::make($this->new_password)
         ]);
+        $this->user->logs()->create([
+            "action" => "Changement de mot de passe"
+        ]);
 
         auth()->user()->notify(new UpdatePasswordNotification($this->user));
 
@@ -53,6 +56,9 @@ class App extends Component
         ]);
 
         auth()->user()->notify(new UpdateMailNotification($this->user));
+        $this->user->logs()->create([
+            "action" => "Changement de l'adresse Mail"
+        ]);
 
         $this->alert("success", "Adresse Mail modifier avec succès");
     }
