@@ -20,6 +20,7 @@ Route::middleware(["auth", "agent"])->group(function () {
 Route::middleware(["auth"])->group(function () {
     Route::prefix('account')->as('account.')->middleware(["password.confirm"])->group(function () {
         Route::get('/', \App\Livewire\Account\App::class)->name('app');
+        Route::get('/mbrHistory', \App\Livewire\Account\MbrHistory::class)->name('mbrHistory');
     });
 });
 Route::get('/test', function () {
