@@ -23,7 +23,7 @@
                     </a>
                 </div>
                 <div class="menu-item">
-                    <a class="menu-link" href="" wire:navigate>
+                    <a class="menu-link" href="{{ route('account.mbrHistory') }}" wire:navigate>
                         <span class="menu-title">Historique du compte</span>
                     </a>
                 </div>
