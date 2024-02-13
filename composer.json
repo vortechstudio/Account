@@ -29,6 +29,7 @@
         "php-flasher/flasher-toastr-laravel": "^1.15",
         "qoraiche/laravel-mail-editor": "^4.1@beta",
         "rappasoft/laravel-authentication-log": "^3.0",
+        "rappasoft/laravel-livewire-tables": "^3.2",
         "salahhusa9/laravel-updater": "^1.0",
         "socialiteproviders/battlenet": "^4.1",
         "socialiteproviders/discord": "^4.2",
