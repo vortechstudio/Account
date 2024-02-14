@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(["auth", "agent"])->group(function () {
+Route::middleware(["auth"])->group(function () {
     Route::get('/', \App\Livewire\Home::class)->name('home');
 });
 
@@ -21,10 +21,12 @@ Route::middleware(["auth"])->group(function () {
     Route::prefix('account')->as('account.')->middleware(["password.confirm"])->group(function () {
         Route::get('/', \App\Livewire\Account\App::class)->name('app');
         Route::get('/mbrHistory', \App\Livewire\Account\MbrHistory::class)->name('mbrHistory');
+        Route::get('/loginHistory', \App\Livewire\Account\LoginHistory::class)->name('loginHistory');
     });
 });
 Route::get('/test', function () {
-    dd(Socialite::driver(auth()->user()->socials()->first()->provider));
+    $tracking = new \IvanoMatteo\LaravelDeviceTracking\LaravelDeviceTracking();
+    dd($tracking->detect());
 });
 
 Route::prefix('auth')->as('auth.')->group(function () {

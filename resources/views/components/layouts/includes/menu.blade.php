@@ -28,7 +28,7 @@
                     </a>
                 </div>
                 <div class="menu-item">
-                    <a class="menu-link" href="">
+                    <a class="menu-link" href="{{ route('account.loginHistory') }}" wire:navigate>
                         <span class="menu-title">Historique des connexions</span>
                     </a>
                 </div>

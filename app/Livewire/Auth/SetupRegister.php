@@ -24,13 +24,17 @@ class SetupRegister extends Component
             "password" => "required|min:8"
         ]);
 
-        $user = User::where('email', $this->email)->first();
+        try {
+            $user = User::where('email', $this->email)->first();
 
-        $user->update([
-            "password" => $this->password
-        ]);
+            $user->update([
+                "password" => $this->password
+            ]);
 
-        \Auth::login($user);
+            \Auth::login($user);
+        }catch (\Exception $exception) {
+            \Log::emergency($exception->getMessage(), [$exception]);
+        }
 
         return redirect()->route('home');
     }
