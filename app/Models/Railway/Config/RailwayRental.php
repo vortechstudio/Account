@@ -10,6 +10,7 @@ class RailwayRental extends Model
     use SoftDeletes;
 
     protected $guarded = [];
+
     public $timestamps = false;
 
     protected $casts = [

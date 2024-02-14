@@ -10,10 +10,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class RailwayAdvantageCard extends Model
 {
     use SoftDeletes;
+
     protected $guarded = [];
 
     protected $casts = [
-        "class" => AdvantageCardClassEnum::class,
-        "type" => AdvantageCardTypeEnum::class
+        'class' => AdvantageCardClassEnum::class,
+        'type' => AdvantageCardTypeEnum::class,
     ];
 }

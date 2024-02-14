@@ -6,15 +6,15 @@ use App\Models\User\UserLog;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 use Livewire\WithPagination;
-use Rappasoft\LaravelLivewireTables\DataTableComponent;
-use Rappasoft\LaravelLivewireTables\Views\Column;
 
 class MbrHistory extends Component
 {
     use WithPagination;
 
     public string $search = '';
+
     public string $orderField = 'action';
+
     public string $orderDirection = 'ASC';
 
     protected $queryString = [
@@ -23,7 +23,8 @@ class MbrHistory extends Component
         'orderDirection' => ['except' => 'ASC'],
     ];
 
-    public function setOrderField(string $name) {
+    public function setOrderField(string $name)
+    {
         if ($name === $this->orderField) {
             $this->orderDirection = $this->orderDirection === 'ASC' ? 'DESC' : 'ASC';
         } else {
@@ -32,14 +33,14 @@ class MbrHistory extends Component
         }
     }
 
-    #[Title("Historique du compte")]
+    #[Title('Historique du compte')]
     public function render()
     {
         return view('livewire.account.mbr-history', [
             'logs' => UserLog::where('user_id', auth()->user()->id)
                 ->where('action', 'LIKE', "%{$this->search}%")
                 ->orderBy($this->orderField, $this->orderDirection)
-                ->paginate(5)
+                ->paginate(5),
         ]);
     }
 }

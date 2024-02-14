@@ -2,9 +2,9 @@
 
 namespace App\Enums\Support\Tickets;
 
-enum TicketPriorityEnum:string
+enum TicketPriorityEnum: string
 {
-    case LOW = "low";
-    case MEDIUM = "medium";
-    case HIGH = "high";
+    case LOW = 'low';
+    case MEDIUM = 'medium';
+    case HIGH = 'high';
 }
