@@ -33,8 +33,8 @@
                     </a>
                 </div>
                 <div class="menu-item">
-                    <a class="menu-link" href="" wire:navigate>
-                        <span class="menu-title">Connexion rapide</span>
+                    <a class="menu-link" href="{{ route('account.rgpd') }}" wire:navigate>
+                        <span class="menu-title">Mes données personnels</span>
                     </a>
                 </div>
             </div>
