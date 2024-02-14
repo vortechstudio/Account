@@ -9,7 +9,9 @@ use Livewire\Component;
 class SetupRegister extends Component
 {
     public $provider;
+
     public $email;
+
     public $password;
 
     public function mount(string $provider, string $email)
@@ -21,25 +23,25 @@ class SetupRegister extends Component
     public function submit()
     {
         $this->validate([
-            "password" => "required|min:8"
+            'password' => 'required|min:8',
         ]);
 
         try {
             $user = User::where('email', $this->email)->first();
 
             $user->update([
-                "password" => $this->password
+                'password' => $this->password,
             ]);
 
             \Auth::login($user);
-        }catch (\Exception $exception) {
+        } catch (\Exception $exception) {
             \Log::emergency($exception->getMessage(), [$exception]);
         }
 
         return redirect()->route('home');
     }
 
-    #[Title("Setup Account")]
+    #[Title('Setup Account')]
     public function render()
     {
         return view('livewire.auth.setup-register');

@@ -10,6 +10,7 @@ class RailwayBanque extends Model
     use SoftDeletes;
 
     protected $guarded = [];
+
     public $timestamps = false;
 
     protected $casts = [
