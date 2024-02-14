@@ -41,7 +41,8 @@ class AuthController extends Controller
                 "email" => $gUser->email ?? generateReference(10)."@vst.local",
                 "password" => \Hash::make("password0000"),
                 "email_verified_at" => now(),
-                "admin" => false
+                "admin" => false,
+                "uuid" => \Str::uuid()
             ]);
 
             if(!$user->socials()->where('provider', $provider)->exists()) {

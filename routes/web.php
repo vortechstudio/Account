@@ -22,6 +22,8 @@ Route::middleware(["auth"])->group(function () {
         Route::get('/', \App\Livewire\Account\App::class)->name('app');
         Route::get('/mbrHistory', \App\Livewire\Account\MbrHistory::class)->name('mbrHistory');
         Route::get('/loginHistory', \App\Livewire\Account\LoginHistory::class)->name('loginHistory');
+        Route::get('/rgpd', \App\Livewire\Account\Rgpd::class)->name('rgpd');
+        Route::get('/rgpd/download', \App\Http\Controllers\Account\RgpdExportController::class)->name('rgpd.export');
     });
 });
 Route::get('/test', function () {

@@ -63,7 +63,8 @@ class User extends Authenticatable
     ];
 
     protected $appends = [
-        'otp_status'
+        'otp_status',
+        'token_tag'
     ];
 
     public function logs()
@@ -115,6 +116,13 @@ class User extends Authenticatable
     public function socials()
     {
         return $this->hasMany(UserSocial::class);
+    }
+
+    public function getTokenTagAttribute()
+    {
+        $explode = explode('-', $this->uuid);
+
+        return \Str::upper($explode[4]);
     }
 
     public function getOtpStatusAttribute()
