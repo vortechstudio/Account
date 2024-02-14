@@ -12,6 +12,7 @@ use App\Models\Support\Tickets\TicketMessage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use IvanoMatteo\LaravelDeviceTracking\Traits\UseDevices;
 use Laravel\Sanctum\HasApiTokens;
 use Laravel\Sanctum\NewAccessToken;
 use Multicaret\Acquaintances\Traits\CanBeFollowed;
@@ -20,10 +21,11 @@ use Multicaret\Acquaintances\Traits\CanFollow;
 use Multicaret\Acquaintances\Traits\CanLike;
 use Multicaret\Acquaintances\Traits\Friendable;
 use Pharaonic\Laravel\Settings\Traits\Settingable;
+use Rappasoft\LaravelAuthenticationLog\Traits\AuthenticationLoggable;
 
 class User extends Authenticatable
 {
-    use CanBeFollowed, CanBeLiked, CanFollow, CanLike, Friendable, HasApiTokens, HasFactory, Notifiable, Settingable;
+    use CanBeFollowed, CanBeLiked, CanFollow, CanLike, Friendable, HasApiTokens, HasFactory, Notifiable, Settingable, AuthenticationLoggable, UseDevices;
 
     /**
      * The attributes that are mass assignable.
@@ -58,6 +60,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
+    ];
+
+    protected $appends = [
+        'otp_status',
+        'token_tag'
     ];
 
     public function logs()
@@ -109,6 +116,22 @@ class User extends Authenticatable
     public function socials()
     {
         return $this->hasMany(UserSocial::class);
+    }
+
+    public function getTokenTagAttribute()
+    {
+        $explode = explode('-', $this->uuid);
+
+        return \Str::upper($explode[4]);
+    }
+
+    public function getOtpStatusAttribute()
+    {
+        if($this->otp) {
+            return '<i class="fa-solid fa-check-circle fs-2 text-success me-2"></i> Actif';
+        } else {
+            return '<i class="fa-solid fa-xmark-circle fs-2 text-danger me-2"></i> Inactif';
+        }
     }
 
     public function createAccessToken($name, $abilities = ['*'])

@@ -18,7 +18,9 @@ class UserObserver
             "status" => true,
             "premium" => false,
             "user_id" => $user->id,
-            "service_id" => 1
+            "service_id" => 1,
+            "created_at" => now(),
+            "updated_at" => now(),
         ]);
 
         $user->logs()->create([
