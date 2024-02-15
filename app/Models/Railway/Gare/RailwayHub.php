@@ -9,11 +9,13 @@ use Pharaonic\Laravel\Settings\Traits\Settingable;
 class RailwayHub extends Model
 {
     use Settingable;
+
     protected $guarded = [];
+
     public $timestamps = false;
 
     protected $casts = [
-        "status" => HubStatusEnum::class
+        'status' => HubStatusEnum::class,
     ];
 
     public function gare()

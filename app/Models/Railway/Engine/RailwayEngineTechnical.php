@@ -9,15 +9,16 @@ use Illuminate\Database\Eloquent\Model;
 class RailwayEngineTechnical extends Model
 {
     protected $guarded = [];
+
     public $timestamps = false;
 
     protected $casts = [
-        "motor" => EngineTechMotorEnum::class,
-        "marchandise" => EngineTechMarchEnum::class
+        'motor' => EngineTechMotorEnum::class,
+        'marchandise' => EngineTechMarchEnum::class,
     ];
 
     public function engine()
     {
-        return $this->belongsTo(RailwayEngine::class, "engine_id");
+        return $this->belongsTo(RailwayEngine::class, 'engine_id');
     }
 }

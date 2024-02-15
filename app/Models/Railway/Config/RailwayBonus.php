@@ -11,9 +11,10 @@ class RailwayBonus extends Model
     use SoftDeletes;
 
     protected $guarded = [];
+
     public $timestamps = false;
 
     protected $casts = [
-        "type" => BonusTypeEnum::class
+        'type' => BonusTypeEnum::class,
     ];
 }
