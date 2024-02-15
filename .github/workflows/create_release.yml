@@ -15,31 +15,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           tag-prefix: 'v'
           default-version: '0.0.1'
-          add-minor-tag: true
-          add-major-tag: true
-          create-release: true
-
-  release_notes:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    timeout-minutes: 5
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          ref: production
-
-      - name: Update Changelog
-        uses: stefanzweifel/changelog-updater-action@v1
-        with:
-          latest-version: ${{ github.event.release.name }}
-          release-notes: ${{ github.event.release.body }}
-
-      - name: Commit updated CHANGELOG
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          branch: production
-          commit_message: Update CHANGELOG
-          file_pattern: CHANGELOG.md
