@@ -25,6 +25,10 @@ Route::middleware(["auth"])->group(function () {
         Route::get('/rgpd', \App\Livewire\Account\Rgpd::class)->name('rgpd');
         Route::get('/rgpd/download', \App\Http\Controllers\Account\RgpdExportController::class)->name('rgpd.export');
     });
+
+    Route::prefix('services')->as('services.')->group(function () {
+        Route::get('/');
+    });
 });
 Route::get('/test', function () {
     $tracking = new \IvanoMatteo\LaravelDeviceTracking\LaravelDeviceTracking();
