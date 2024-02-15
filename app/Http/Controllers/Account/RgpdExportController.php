@@ -12,6 +12,7 @@ class RgpdExportController extends Controller
         $user = auth()->user();
         $user->load('profil', 'socials', 'services');
         $pdf = Pdf::loadView('auth.rgpd', compact('user'));
+
         return $pdf->download('rgpd.pdf');
     }
 }

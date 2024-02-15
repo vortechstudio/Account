@@ -10,8 +10,7 @@ class ActivateOtpNotification extends Notification
 {
     public function __construct(
         public User $user
-    )
-    {
+    ) {
     }
 
     public function via($notifiable): array
@@ -23,8 +22,8 @@ class ActivateOtpNotification extends Notification
     {
         return (new MailMessage)
             ->subject("Activation de l'authentification OTP sur votre compte")
-            ->view("mails.user.activate_otp", [
-                "user" => $this->user
+            ->view('mails.user.activate_otp', [
+                'user' => $this->user,
             ]);
     }
 

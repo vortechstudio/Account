@@ -8,9 +8,6 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Process;
-use function Laravel\Prompts\confirm;
-use function Laravel\Prompts\spin;
-use function Laravel\Prompts\text;
 
 class InstallCommand extends Command
 {
@@ -34,6 +31,7 @@ class InstallCommand extends Command
             $this->line('please run');
             $this->line('php artisan app:install --help');
             $this->line('to see the command usage.');
+
             return 0;
         }
         $this->alert('Application is installing...');
@@ -42,23 +40,25 @@ class InstallCommand extends Command
         $this->updateEnvVariablesFromOptions();
         $this->info('Env file created successfully.');
         $this->info('Runnning migrations and seeders...');
-        if(!$this->option('no-migrate')) {
-            if (!static::runMigrationsWithSeeders()) {
+        if (! $this->option('no-migrate')) {
+            if (! static::runMigrationsWithSeeders()) {
                 $this->error('Your database credentials are wrong!');
+
                 return 0;
             }
         }
-        if($this->confirm("Système visuel ?", true)) {
+        if ($this->confirm('Système visuel ?', true)) {
             $this->installFrontSystem();
         }
 
         $this->alert('Application is installed successfully.');
+
         return 1;
     }
 
     public function missingRequiredOptions(): bool
     {
-        return !$this->option('db-database');
+        return ! $this->option('db-database');
     }
 
     private function updateEnv($data)
@@ -71,25 +71,26 @@ class InstallCommand extends Command
                 $entry = explode('=', $envValue, 2);
                 // Check if exists or not in env file
                 if ($entry[0] == $dataKey) {
-                    $env[$envKey] = $dataKey . '=' . $dataValue;
+                    $env[$envKey] = $dataKey.'='.$dataValue;
                     $alreadyExistInEnv = true;
                 } else {
                     $env[$envKey] = $envValue;
                 }
             }
             // add the variable if not exists in env
-            if (!$alreadyExistInEnv) {
-                $env[] = $dataKey . '=' . $dataValue;
+            if (! $alreadyExistInEnv) {
+                $env[] = $dataKey.'='.$dataValue;
             }
         }
         $env = implode("\n", $env);
         file_put_contents(base_path('.env'), $env);
+
         return true;
     }
 
     public static function copyEnvExampleToEnv()
     {
-        if (!is_file(base_path('.env')) && is_file(base_path('.env.example'))) {
+        if (! is_file(base_path('.env')) && is_file(base_path('.env.example'))) {
             File::copy(base_path('.env.example'), base_path('.env'));
         }
     }
@@ -107,6 +108,7 @@ class InstallCommand extends Command
         } catch (\Exception $e) {
             return false;
         }
+
         return true;
     }
 
@@ -119,7 +121,7 @@ class InstallCommand extends Command
             'DB_USERNAME' => $this->option('db-username'),
             'DB_PASSWORD' => $this->option('db-password'),
             'GITHUB_REPOSITORY' => $this->option('github-repository'),
-            'GITHUB_TOKEN' => $this->option('github-token')
+            'GITHUB_TOKEN' => $this->option('github-token'),
         ]);
         $conn = config('database.default', 'mysql');
         $dbConfig = Config::get("database.connections.$conn");
@@ -136,11 +138,11 @@ class InstallCommand extends Command
 
     private function installFrontSystem()
     {
-        $this->info("Installation de livewire");
+        $this->info('Installation de livewire');
         Process::run('composer require livewire/livewire');
         Artisan::call('livewire:publish', ['--config']);
 
-        Process::run("npm install");
-        Process::run("npm run build");
+        Process::run('npm install');
+        Process::run('npm run build');
     }
 }

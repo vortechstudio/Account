@@ -7,10 +7,10 @@ use Livewire\Component;
 
 class Rgpd extends Component
 {
-    #[Title("Mes données personnels (RGPD)")]
+    #[Title('Mes données personnels (RGPD)')]
     public function render()
     {
         return view('livewire.account.rgpd')
-            ->layout("components.layouts.app");
+            ->layout('components.layouts.app');
     }
 }

@@ -2,9 +2,9 @@
 
 namespace App\Enums\Railway\Engine;
 
-enum EngineTechMarchEnum:string
+enum EngineTechMarchEnum: string
 {
-    case NONE = "none";
-    case PASSAGER = "passager";
-    case MARCHANDISE = "marchandise";
+    case NONE = 'none';
+    case PASSAGER = 'passager';
+    case MARCHANDISE = 'marchandise';
 }

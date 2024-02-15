@@ -25,7 +25,7 @@ use Rappasoft\LaravelAuthenticationLog\Traits\AuthenticationLoggable;
 
 class User extends Authenticatable
 {
-    use CanBeFollowed, CanBeLiked, CanFollow, CanLike, Friendable, HasApiTokens, HasFactory, Notifiable, Settingable, AuthenticationLoggable, UseDevices;
+    use AuthenticationLoggable, CanBeFollowed, CanBeLiked, CanFollow, CanLike, Friendable, HasApiTokens, HasFactory, Notifiable, Settingable, UseDevices;
 
     /**
      * The attributes that are mass assignable.
@@ -39,7 +39,7 @@ class User extends Authenticatable
         'admin',
         'otp',
         'otp_token',
-        'otp_expires_at'
+        'otp_expires_at',
     ];
 
     /**
@@ -64,7 +64,7 @@ class User extends Authenticatable
 
     protected $appends = [
         'otp_status',
-        'token_tag'
+        'token_tag',
     ];
 
     public function logs()
@@ -127,7 +127,7 @@ class User extends Authenticatable
 
     public function getOtpStatusAttribute()
     {
-        if($this->otp) {
+        if ($this->otp) {
             return '<i class="fa-solid fa-check-circle fs-2 text-success me-2"></i> Actif';
         } else {
             return '<i class="fa-solid fa-xmark-circle fs-2 text-danger me-2"></i> Inactif';
@@ -137,11 +137,11 @@ class User extends Authenticatable
     public function createAccessToken($name, $abilities = ['*'])
     {
         $token = $this->tokens()->create([
-            "name" => $name,
-            "token" => hash('sha256', $plainTextToken = \Str::random(40)),
-            "abilities" => $abilities,
-            "last_used_at" => now(),
-            "expires_at" => now()->addHour()
+            'name' => $name,
+            'token' => hash('sha256', $plainTextToken = \Str::random(40)),
+            'abilities' => $abilities,
+            'last_used_at' => now(),
+            'expires_at' => now()->addHour(),
         ]);
 
         return new NewAccessToken($token, $token->id.'|'.$plainTextToken);

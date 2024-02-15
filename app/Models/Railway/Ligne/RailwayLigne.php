@@ -12,14 +12,15 @@ use Pharaonic\Laravel\Settings\Traits\Settingable;
 
 class RailwayLigne extends Model
 {
-    use SoftDeletes, Settingable;
+    use Settingable, SoftDeletes;
 
     protected $guarded = [];
+
     public $timestamps = false;
 
     protected $casts = [
-        "status" => LigneStatusEnum::class,
-        "type" => LigneTypeEnum::class,
+        'status' => LigneStatusEnum::class,
+        'type' => LigneTypeEnum::class,
     ];
 
     public function start()
@@ -34,7 +35,7 @@ class RailwayLigne extends Model
 
     public function hub()
     {
-        return $this->belongsTo(RailwayHub::class, "hub_id");
+        return $this->belongsTo(RailwayHub::class, 'hub_id');
     }
 
     public function stations()

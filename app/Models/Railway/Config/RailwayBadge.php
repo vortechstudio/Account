@@ -10,6 +10,7 @@ class RailwayBadge extends Model
     use SoftDeletes;
 
     protected $guarded = [];
+
     public $timestamps = false;
 
     protected $casts = [

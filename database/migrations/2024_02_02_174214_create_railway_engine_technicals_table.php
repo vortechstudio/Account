@@ -4,7 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration {
+return new class extends Migration
+{
     public function up(): void
     {
         Schema::create('railway_engine_technicals', function (Blueprint $table) {
@@ -17,9 +18,9 @@ return new class extends Migration {
             $table->integer('nb_wagon')->nullable();
 
             $table->foreignId('engine_id')
-               ->constrained("railway_engines")
-               ->cascadeOnUpdate()
-               ->cascadeOnDelete();
+                ->constrained('railway_engines')
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
         });
     }
 

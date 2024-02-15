@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class RailwayResearchCategory extends Model
 {
     protected $guarded = [];
+
     public $timestamps = false;
 }

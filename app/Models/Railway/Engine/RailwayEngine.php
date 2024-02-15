@@ -14,14 +14,15 @@ class RailwayEngine extends Model
     use SoftDeletes;
 
     protected $guarded = [];
+
     public $timestamps = false;
 
     protected $casts = [
         'uuid' => 'string',
-        "type_transport" => RailwayEngineTransportEnum::class,
-        "type_train" => RailwayEngineTrainEnum::class,
-        "type_energy" => RailwayEngineEnergyEnum::class,
-        "status" => RailwayEngineStatusEnum::class
+        'type_transport' => RailwayEngineTransportEnum::class,
+        'type_train' => RailwayEngineTrainEnum::class,
+        'type_energy' => RailwayEngineEnergyEnum::class,
+        'status' => RailwayEngineStatusEnum::class,
     ];
 
     public function shop()
