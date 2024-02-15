@@ -6,22 +6,25 @@ use App\Enums\Social\ArticleTypeEnum;
 use App\Models\User\User;
 use Illuminate\Database\Eloquent\Model;
 use Pharaonic\Laravel\Categorizable\Traits\Categorizable;
+use Pharaonic\Laravel\Sluggable\Sluggable;
 
 class Article extends Model
 {
-    use Categorizable;
+    use Categorizable, Sluggable;
 
     protected $guarded = [];
 
     protected $casts = [
-        'published_at' => 'timestamp',
-        'publish_social_at' => 'timestamp',
+        'published_at' => 'datetime',
+        'publish_social_at' => 'datetime',
         'type' => ArticleTypeEnum::class,
     ];
 
+    protected $sluggable = 'title';
+
     public function author()
     {
-        return $this->belongsTo(User::class, 'author', 'user_id');
+        return $this->belongsTo(User::class, 'author', 'id');
     }
 
     public function cercle()

@@ -2,9 +2,8 @@
 
 namespace App\Enums\Config;
 
-use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
-enum ServiceTypeEnum:string
+enum ServiceTypeEnum: string
 {
-    case JEUX = "jeux";
-    case PLATEFORME = "plateforme";
+    case JEUX = 'jeux';
+    case PLATEFORME = 'plateforme';
 }

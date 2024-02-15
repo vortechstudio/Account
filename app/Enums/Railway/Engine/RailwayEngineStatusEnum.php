@@ -2,9 +2,9 @@
 
 namespace App\Enums\Railway\Engine;
 
-enum RailwayEngineStatusEnum:string
+enum RailwayEngineStatusEnum: string
 {
-    case NULL = "";
-    case BETA = "beta";
-    case PROD = "production";
+    case NULL = '';
+    case BETA = 'beta';
+    case PROD = 'production';
 }

@@ -20,9 +20,9 @@ class UpdateMailNotification extends Notification
     public function toMail($notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject("Mise à jours des informations de votre compte")
-            ->view("mails.user.update_mail", [
-                "user" => $this->user
+            ->subject('Mise à jours des informations de votre compte')
+            ->view('mails.user.update_mail', [
+                'user' => $this->user,
             ]);
     }
 
