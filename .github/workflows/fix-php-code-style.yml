@@ -28,6 +28,7 @@ jobs:
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: Fix styling
-          branch: dev-fix-codestyle
+          commit_message: Fix styling ${{ github.head_ref }}
+          branch: dev-fix-codestyle-${{ github.head_ref }}
           create_branch: true
+          skip_dirty_check: true
