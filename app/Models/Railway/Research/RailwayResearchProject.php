@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class RailwayResearchProject extends Model
 {
     use SoftDeletes;
+
     protected $guarded = [];
+
     public $timestamps = false;
 
     public function category()

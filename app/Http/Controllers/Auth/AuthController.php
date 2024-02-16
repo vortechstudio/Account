@@ -13,6 +13,7 @@ class AuthController extends Controller
     {
         return view('auth.login');
     }
+
     public function redirect(string $provider)
     {
         return Socialite::driver($provider)->redirect();
@@ -21,13 +22,14 @@ class AuthController extends Controller
     public function callback(string $provider)
     {
         $user = Socialite::driver($provider)->stateless()->user();
+
         return match ($provider) {
-            "google" => $this->verifyUser($user, "google"),
-            "steam" => $this->verifyUser($user, "steam"),
-            "battlenet" => $this->verifyUser($user, "battlenet"),
-            "discord" => $this->verifyUser($user, "discord"),
-            "facebook" => $this->verifyUser($user, "facebook"),
-            "twitch" => $this->verifyUser($user, 'twitch')
+            'google' => $this->verifyUser($user, 'google'),
+            'steam' => $this->verifyUser($user, 'steam'),
+            'battlenet' => $this->verifyUser($user, 'battlenet'),
+            'discord' => $this->verifyUser($user, 'discord'),
+            'facebook' => $this->verifyUser($user, 'facebook'),
+            'twitch' => $this->verifyUser($user, 'twitch')
         };
     }
 
@@ -35,22 +37,22 @@ class AuthController extends Controller
     {
         $gUser = $user;
         $user = User::query()->where('email', $gUser->email)->first();
-        if (!$user) {
+        if (! $user) {
             $user = User::query()->create([
-                "name" => $gUser->name ?? $gUser->nickname,
-                "email" => $gUser->email ?? generateReference(10)."@vst.local",
-                "password" => \Hash::make("password0000"),
-                "email_verified_at" => now(),
-                "admin" => false,
-                "uuid" => \Str::uuid()
+                'name' => $gUser->name ?? $gUser->nickname,
+                'email' => $gUser->email ?? generateReference(10).'@vst.local',
+                'password' => \Hash::make('password0000'),
+                'email_verified_at' => now(),
+                'admin' => false,
+                'uuid' => \Str::uuid(),
             ]);
 
-            if(!$user->socials()->where('provider', $provider)->exists()) {
+            if (! $user->socials()->where('provider', $provider)->exists()) {
                 $user->socials()->create([
-                    "provider" => $provider,
-                    "provider_id" => $gUser->id,
+                    'provider' => $provider,
+                    'provider_id' => $gUser->id,
                     'avatar' => $gUser->avatar,
-                    "user_id" => $user->id
+                    'user_id' => $user->id,
                 ]);
             }
 
@@ -77,9 +79,9 @@ class AuthController extends Controller
 
     public function confirmPassword(Request $request)
     {
-        if(!\Hash::check($request->password, $request->user()->password)) {
+        if (! \Hash::check($request->password, $request->user()->password)) {
             toastr()
-                ->addError("Mot de passe erronée", "Vérification d'accès !");
+                ->addError('Mot de passe erronée', "Vérification d'accès !");
         }
 
         $request->session()->passwordConfirmed();

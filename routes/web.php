@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(["auth"])->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::get('/', \App\Livewire\Home::class)->name('home');
 });
 
-Route::middleware(["auth"])->group(function () {
-    Route::prefix('account')->as('account.')->middleware(["password.confirm"])->group(function () {
+Route::middleware(['auth'])->group(function () {
+    Route::prefix('account')->as('account.')->middleware(['password.confirm'])->group(function () {
         Route::get('/', \App\Livewire\Account\App::class)->name('app');
         Route::get('/mbrHistory', \App\Livewire\Account\MbrHistory::class)->name('mbrHistory');
         Route::get('/loginHistory', \App\Livewire\Account\LoginHistory::class)->name('loginHistory');
@@ -43,10 +43,9 @@ Route::prefix('auth')->as('auth.')->group(function () {
     Route::get('logout', [\App\Http\Controllers\Auth\AuthController::class, 'logout'])->name('logout');
     Route::post('password-confirm', [\App\Http\Controllers\Auth\AuthController::class, 'confirmPassword'])
         ->name('confirm-password')
-        ->middleware(["auth", "throttle:6,1"]);
+        ->middleware(['auth', 'throttle:6,1']);
 });
 
 Route::get('password-confirm', [\App\Http\Controllers\Auth\AuthController::class, 'confirmPasswordForm'])
     ->name('password.confirm')
     ->middleware('auth');
-
