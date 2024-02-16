@@ -1,0 +1,5 @@
+{
+    "branches": ["production"],
+    "repositoryUrl": "https://github.com/vortechstudio/Account.git",
+    "plugins": ['@semantic-release/commit-analyzer', '@semantic-release/release-notes-generator', '@semantic-release/npm', '@semantic-release/github']
+}
