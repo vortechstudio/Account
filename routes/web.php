@@ -27,7 +27,7 @@ Route::middleware(["auth"])->group(function () {
     });
 
     Route::prefix('services')->as('services.')->group(function () {
-        Route::get('/');
+        Route::get('/', \App\Livewire\Service\Service::class)->name('dashboard');
     });
 });
 Route::get('/test', function () {
