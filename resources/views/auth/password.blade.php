@@ -101,7 +101,7 @@
                 <div class="d-flex flex-stack px-lg-10">
                     <!--begin::Languages-->
                     <div class="me-0">
-                        <span>Version: v0.1.0-alpha</span>
+                        <span>Version: {{ $version }}</span>
                     </div>
                     <!--end::Languages-->
                     <!--begin::Links-->

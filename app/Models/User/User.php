@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use IvanoMatteo\LaravelDeviceTracking\Traits\UseDevices;
+use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Sanctum\HasApiTokens;
 use Laravel\Sanctum\NewAccessToken;
 use Multicaret\Acquaintances\Traits\CanBeFollowed;
@@ -25,7 +26,7 @@ use Rappasoft\LaravelAuthenticationLog\Traits\AuthenticationLoggable;
 
 class User extends Authenticatable
 {
-    use CanBeFollowed, CanBeLiked, CanFollow, CanLike, Friendable, HasApiTokens, HasFactory, Notifiable, Settingable, AuthenticationLoggable, UseDevices;
+    use CanBeFollowed, CanBeLiked, CanFollow, CanLike, Friendable, HasApiTokens, HasFactory, Notifiable, Settingable, AuthenticationLoggable, UseDevices, TwoFactorAuthenticatable;
 
     /**
      * The attributes that are mass assignable.
@@ -127,7 +128,7 @@ class User extends Authenticatable
 
     public function getOtpStatusAttribute()
     {
-        if($this->otp) {
+        if($this->two_factor_confirmed_at) {
             return '<i class="fa-solid fa-check-circle fs-2 text-success me-2"></i> Actif';
         } else {
             return '<i class="fa-solid fa-xmark-circle fs-2 text-danger me-2"></i> Inactif';

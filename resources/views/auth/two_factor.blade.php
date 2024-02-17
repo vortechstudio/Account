@@ -4,7 +4,7 @@
 <!--begin::Head-->
 <head>
     <base href="../../../" />
-    <title>Connexion - {{ config('app.name') }}</title>
+    <title>Connexion TOTP - {{ config('app.name') }}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
@@ -68,11 +68,12 @@
                 <!--begin::Wrapper-->
                 <div class="d-flex flex-center flex-column flex-column-fluid px-lg-10 pb-15 pb-lg-20">
                     <!--begin::Form-->
-                    <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="index.html" action="#">
+                    <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="index.html" action="/two-factor-challenge" method="post">
+                        @csrf
                         <!--begin::Heading-->
                         <div class="text-center mb-11">
                             <!--begin::Title-->
-                            <h1 class="text-gray-900 fw-bolder mb-3">Connexion à {{ config('app.name') }}</h1>
+                            <h1 class="text-gray-900 fw-bolder mb-3">Authentification FORTE (MFA)</h1>
                             <!--end::Title-->
 
                         </div>
@@ -80,50 +81,17 @@
                         <!--begin::Login options-->
                         <div class="row g-3 mb-9">
                             <!--begin::Col-->
-                            <div class="col-md-12">
-                                <!--begin::Google link=-->
-                                <a href="{{ route('auth.redirect', 'facebook') }}" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
-                                    <img alt="Logo" src="{{ asset('/media/svg/brand-logos/facebook-1.svg') }}" class="h-15px me-3" />Connexion avec Facebook
-                                </a>
-                                <!--end::Google link=-->
-                            </div>
-                            <div class="col-md-12">
-                                <!--begin::Google link=-->
-                                <a href="{{ route('auth.redirect', 'google') }}" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
-                                    <img alt="Logo" src="{{ asset('/media/svg/brand-logos/google-icon.svg') }}" class="h-15px me-3" />Connexion avec Google
-                                </a>
-                                <!--end::Google link=-->
-                            </div>
-                            <div class="col-md-12">
-                                <!--begin::Google link=-->
-                                <a href="{{ route('auth.redirect', 'steam') }}" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
-                                    <img alt="Logo" src="{{ asset('/media/svg/brand-logos/steam.png') }}" class="h-15px me-3" />Connexion avec Steam
-                                </a>
-                                <!--end::Google link=-->
-                            </div>
-                            <div class="col-md-12">
-                                <!--begin::Google link=-->
-                                <a href="{{ route('auth.redirect', 'battlenet') }}" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
-                                    <img alt="Logo" src="{{ asset('/media/svg/brand-logos/battlenet.png') }}" class="h-15px me-3" />Connexion avec Battle net
-                                </a>
-                                <!--end::Google link=-->
-                            </div>
-                            <div class="col-md-12">
-                                <!--begin::Google link=-->
-                                <a href="{{ route('auth.redirect', 'discord') }}" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
-                                    <img alt="Logo" src="{{ asset('/media/svg/brand-logos/discord.png') }}" class="h-15px me-3" />Connexion avec Discord
-                                </a>
-                                <!--end::Google link=-->
-                            </div>
-                            <div class="col-md-12">
-                                <!--begin::Google link=-->
-                                <a href="{{ route('auth.redirect', 'twitch') }}" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
-                                    <img alt="Logo" src="{{ asset('/media/svg/brand-logos/twitch.svg') }}" class="h-15px me-3" />Connexion avec Twitch
-                                </a>
-                                <!--end::Google link=-->
+                            <div class="col">
+                                <x-form.input
+                                    label="Confirmer votre accès"
+                                    placeholder="Taper le code TOTP de votre application"
+                                    type="text"
+                                    name="code"
+                                    required="true" />
                             </div>
                             <!--end::Col-->
                         </div>
+                        <x-form.button text-submit="Vérifier" text-loading="Vérification en cours..."/>
                         <!--end::Login options-->
                     </form>
                     <!--end::Form-->
@@ -161,8 +129,6 @@
 <!--end::Global Javascript Bundle-->
 <!--begin::Custom Javascript(used for this page only)-->
 <script src="assets/js/custom/authentication/sign-in/general.js"></script>
-@livewireScripts
-<x-livewire-alert::scripts />
 <!--end::Custom Javascript-->
 <!--end::Javascript-->
 </body>

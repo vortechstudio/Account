@@ -4,10 +4,11 @@ namespace App\Models\User;
 
 use App\Models\Config\Service;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class UserService extends Model
 {
-    public $timestamps = false;
+    use SoftDeletes;
 
     protected $guarded = [];
 
