@@ -20,7 +20,7 @@ class VersionBuildAction
 
     public function getVersionInfo()
     {
-        if(config('app.env') == 'local' || config('app.env') == 'testing') {
+        if(config('app.env') == 'local' || config('app.env') == 'testing' || config('app.env') == 'staging') {
             return $this->getLastTag().'-'.$this->getLastCommitHash();
         } else {
             return $this->getLastTag();
