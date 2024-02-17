@@ -28,6 +28,7 @@ Route::middleware(["auth"])->group(function () {
 
     Route::prefix('services')->as('services.')->group(function () {
         Route::get('/', \App\Livewire\Service\Service::class)->name('dashboard');
+        Route::get('/mfa', \App\Livewire\Service\Authenticator::class)->name('authenticator');
     });
 });
 Route::get('/test', function () {
