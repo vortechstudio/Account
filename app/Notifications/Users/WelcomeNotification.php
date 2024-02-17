@@ -20,8 +20,8 @@ class WelcomeNotification extends Notification
     public function toMail($notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject("Bienvenue !")
-            ->view('maileclipse::templates.welcomeNewUser', ["user" => $this->user]);
+            ->subject('Bienvenue !')
+            ->view('maileclipse::templates.welcomeNewUser', ['user' => $this->user]);
     }
 
     public function toArray($notifiable): array

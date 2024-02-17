@@ -38,7 +38,7 @@ return [
     'environments' => [
         'production',
         'local',
-        'testing'
+        'testing',
     ],
 
     /*
@@ -109,7 +109,7 @@ return [
         '*cvv*',
         '*iban*',
         '*name*',
-        '*email*'
+        '*email*',
     ],
 
     /*

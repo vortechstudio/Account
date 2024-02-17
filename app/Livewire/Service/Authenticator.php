@@ -9,7 +9,9 @@ use Livewire\Component;
 class Authenticator extends Component
 {
     public User $user;
+
     public bool $two_factor_enabled;
+
     public bool $two_factor_confirm;
 
     public function mount()
@@ -19,7 +21,7 @@ class Authenticator extends Component
         $this->two_factor_confirm = $this->user->two_factor_confirmed_at ?? false;
     }
 
-    #[Title("Mot de passe à usage unique (MFA)")]
+    #[Title('Mot de passe à usage unique (MFA)')]
     public function render()
     {
         return view('livewire.service.authenticator')

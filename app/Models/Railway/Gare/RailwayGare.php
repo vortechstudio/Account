@@ -9,10 +9,11 @@ use Illuminate\Database\Eloquent\Model;
 class RailwayGare extends Model
 {
     public $timestamps = false;
+
     protected $guarded = [];
 
     protected $casts = [
-        "type" => GareTypeEnum::class,
+        'type' => GareTypeEnum::class,
     ];
 
     public function weather()
