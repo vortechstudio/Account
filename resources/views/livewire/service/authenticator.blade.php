@@ -27,15 +27,45 @@
                     </tbody>
                 </table>
             </div>
-            @if($two_factor_enabled)
-                {!! request()->user()->twoFactorQrCodeSvg() !!}
+            @if($user->two_factor_confirmed_at)
+                <form action="/user/two-factor-authentication" method="POST">
+                    @csrf
+                    @method("DELETE")
+                    <x-form.button
+                        text-submit="Désactiver l'authentificateur MFA" />
+                </form>
             @else
-                <button class="btn btn-flex btn-outline btn-outline-primary px-6">
-                    <span class="symbol symbol-40px me-3">
-                        <i class="fa-solid fa-key fs-2"></i>
-                    </span>
-                    <span>Activer l'authentificateur Double facteur (MFA)</span>
-                </button>
+                @if (session('status') == 'two-factor-authentication-enabled')
+                    @if (session('status') == 'two-factor-authentication-confirmed')
+                        <div class="mb-4 font-medium text-sm">
+                            Two factor authentication confirmed and enabled successfully.
+                        </div>
+                    @else
+                        <div class="mb-4 font-medium text-sm">
+                            Please finish configuring two factor authentication below.
+                        </div>
+                        {!! request()->user()->twoFactorQrCodeSvg() !!}
+                        <form action="/user/confirmed-two-factor-authentication" method="POST">
+                            @csrf
+                            <x-form.input
+                                name="code"
+                                label="TOTP Code:"
+                                required="true" />
+
+                            <x-form.button />
+                        </form>
+                    @endif
+                @else
+                    <form action="/user/two-factor-authentication" method="POST">
+                        @csrf
+                        <button type="submit" class="btn btn-flex btn-outline btn-outline-primary px-6">
+                        <span class="symbol symbol-40px me-3">
+                            <i class="fa-solid fa-key fs-2"></i>
+                        </span>
+                            <span>Activer l'authentificateur Double facteur (MFA)</span>
+                        </button>
+                    </form>
+                @endif
             @endif
         </div>
     </div>

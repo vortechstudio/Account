@@ -19,11 +19,6 @@ class Authenticator extends Component
         $this->two_factor_confirm = $this->user->two_factor_confirmed_at ?? false;
     }
 
-    public function enableTotp()
-    {
-
-    }
-
     #[Title("Mot de passe à usage unique (MFA)")]
     public function render()
     {

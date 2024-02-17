@@ -128,7 +128,7 @@ class User extends Authenticatable
 
     public function getOtpStatusAttribute()
     {
-        if($this->otp) {
+        if($this->two_factor_confirmed_at) {
             return '<i class="fa-solid fa-check-circle fs-2 text-success me-2"></i> Actif';
         } else {
             return '<i class="fa-solid fa-xmark-circle fs-2 text-danger me-2"></i> Inactif';

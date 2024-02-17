@@ -32,8 +32,8 @@ Route::middleware(["auth"])->group(function () {
     });
 });
 Route::get('/test', function () {
-    $tracking = new \IvanoMatteo\LaravelDeviceTracking\LaravelDeviceTracking();
-    dd($tracking->detect());
+    $version = new \App\Actions\VersionBuildAction();
+    dd($version->getVersionInfo());
 });
 
 Route::prefix('auth')->as('auth.')->group(function () {
