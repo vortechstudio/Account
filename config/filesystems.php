@@ -43,6 +43,13 @@ return [
             'visibility' => 'public',
             'throw' => false,
         ],
+        'vortech' => [
+            'driver' => 'local',
+            'root' => "C:\Users\maxim\Documents\Projects\s3.vortechstudio",
+            'throw' => false,
+            'url' => 'https://s3.'.env('APP_DOMAIN').'/',
+            'visibility' => 'public',
+        ],
 
         's3' => [
             'driver' => 's3',
