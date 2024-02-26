@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Actions\VersionBuildAction;
 use Illuminate\Support\ServiceProvider;
+use Vortechstudio\VersionBuildAction\Facades\VersionBuildAction;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -12,7 +12,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        \View::composer('*', function ($view) {
+            $view->with('version', VersionBuildAction::getVersionInfo());
+        });
     }
 
     /**
@@ -20,9 +22,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $version = new VersionBuildAction();
-        \View::share([
-            'version' => $version->getVersionInfo(),
-        ]);
+
     }
 }

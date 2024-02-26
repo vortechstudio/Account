@@ -51,7 +51,7 @@
             <div class="d-flex flex-center flex-lg-start flex-column">
                 <!--begin::Logo-->
                 <a href="{{ route('home') }}" class="mb-7">
-                    <img alt="Logo" src="{{ asset('/storage/logos/logo_dark.webp') }}" />
+                    <img alt="Logo" src="{{ Storage::url('logos/logo_dark.webp') }}" />
                 </a>
                 <!--end::Logo-->
                 <!--begin::Title-->
@@ -156,11 +156,10 @@
 <!--begin::Javascript-->
 <script>var hostUrl = "assets/";</script>
 <!--begin::Global Javascript Bundle(mandatory for all pages)-->
-<script src="assets/plugins/global/plugins.bundle.js"></script>
-<script src="assets/js/scripts.bundle.js"></script>
+<script src="{{ asset('/plugins/global/plugins.bundle.js') }}"></script>
+<script src="{{ asset('/js/scripts.bundle.js') }}"></script>
 <!--end::Global Javascript Bundle-->
 <!--begin::Custom Javascript(used for this page only)-->
-<script src="assets/js/custom/authentication/sign-in/general.js"></script>
 @livewireScripts
 <x-livewire-alert::scripts />
 <!--end::Custom Javascript-->

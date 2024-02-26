@@ -15,7 +15,7 @@
         <!--begin::Logo-->
         <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0 me-lg-15">
             <a href="{{ route('home') }}">
-                <img alt="Logo" src="{{ asset('/storage/logos/logo.png') }}" class="h-25px h-lg-40px" />
+                <img alt="Logo" src="{{ Storage::url('logos/logo.png') }}" class="h-25px h-lg-40px" />
             </a>
         </div>
         <!--end::Logo-->
