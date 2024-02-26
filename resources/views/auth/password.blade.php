@@ -51,7 +51,7 @@
             <div class="d-flex flex-center flex-lg-start flex-column">
                 <!--begin::Logo-->
                 <a href="{{ route('home') }}" class="mb-7">
-                    <img alt="Logo" src="{{ asset('/storage/logos/logo_dark.webp') }}" />
+                    <img alt="Logo" src="{{ Storage::url('logos/logo_dark.webp') }}" />
                 </a>
                 <!--end::Logo-->
                 <!--begin::Title-->
@@ -101,7 +101,7 @@
                 <div class="d-flex flex-stack px-lg-10">
                     <!--begin::Languages-->
                     <div class="me-0">
-                        <span>Version: v0.1.0-alpha</span>
+                        <span>Version: {{ $version }}</span>
                     </div>
                     <!--end::Languages-->
                     <!--begin::Links-->
