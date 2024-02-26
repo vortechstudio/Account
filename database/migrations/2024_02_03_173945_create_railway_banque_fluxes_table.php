@@ -4,7 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration {
+return new class extends Migration
+{
     public function up(): void
     {
         Schema::create('railway_banque_fluxes', function (Blueprint $table) {
@@ -13,9 +14,9 @@ return new class extends Migration {
             $table->decimal('interest');
 
             $table->foreignId('banque_id')
-               ->constrained("railway_banques")
-               ->cascadeOnUpdate()
-               ->cascadeOnDelete();
+                ->constrained('railway_banques')
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
         });
     }
 

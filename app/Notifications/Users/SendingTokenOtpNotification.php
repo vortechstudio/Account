@@ -11,8 +11,7 @@ class SendingTokenOtpNotification extends Notification
     public function __construct(
         public User $user,
         public string $token
-    )
-    {
+    ) {
     }
 
     public function via($notifiable): array
@@ -25,8 +24,8 @@ class SendingTokenOtpNotification extends Notification
         return (new MailMessage)
             ->subject('Votre code OTP est: '.$this->token)
             ->view('maileclipse::templates.otpCodeToken', [
-                "otp_code" => $this->token,
-                "first_name" => $this->user->name
+                'otp_code' => $this->token,
+                'first_name' => $this->user->name,
             ]);
     }
 

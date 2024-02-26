@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $version = new VersionBuildAction();
         \View::share([
-            'version' => $version->getVersionInfo()
+            'version' => $version->getVersionInfo(),
         ]);
     }
 }

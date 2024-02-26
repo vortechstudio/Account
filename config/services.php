@@ -34,13 +34,13 @@ return [
     'facebook' => [
         'client_id' => env('FACEBOOK_CLIENT_ID'),
         'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
-        'redirect' => env('FACEBOOK_REDIRECT_URI')
+        'redirect' => env('FACEBOOK_REDIRECT_URI'),
     ],
 
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => env('GOOGLE_REDIRECT_URI')
+        'redirect' => env('GOOGLE_REDIRECT_URI'),
     ],
 
     'steam' => [
@@ -50,13 +50,13 @@ return [
         'allowed_hosts' => [
             'localhost',
             'account.vortechstudio.ovh',
-            'account.vortechstudio.fr'
-        ]
+            'account.vortechstudio.fr',
+        ],
     ],
     'battlenet' => [
         'client_id' => env('BATTLENET_CLIENT_ID'),
         'client_secret' => env('BATTLENET_CLIENT_SECRET'),
-        'redirect' => env('BATTLENET_REDIRECT_URI')
+        'redirect' => env('BATTLENET_REDIRECT_URI'),
     ],
 
     'discord' => [
@@ -65,13 +65,13 @@ return [
         'redirect' => env('DISCORD_REDIRECT_URI'),
 
         // optional
-        'allow_gif_avatars' => (bool)env('DISCORD_AVATAR_GIF', true),
+        'allow_gif_avatars' => (bool) env('DISCORD_AVATAR_GIF', true),
         'avatar_default_extension' => env('DISCORD_EXTENSION_DEFAULT', 'png'), // only pick from jpg, png, webp
     ],
 
     'twitch' => [
         'client_id' => env('TWITCH_CLIENT_ID'),
         'client_secret' => env('TWITCH_CLIENT_SECRET'),
-        'redirect' => env('TWITCH_REDIRECT_URI')
+        'redirect' => env('TWITCH_REDIRECT_URI'),
     ],
 ];

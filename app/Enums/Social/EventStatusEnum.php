@@ -2,7 +2,7 @@
 
 namespace App\Enums\Social;
 
-enum EventStatusEnum:string
+enum EventStatusEnum: string
 {
     case PROGRESS = 'progress';
 

@@ -2,13 +2,12 @@
 
 namespace App\Actions;
 
-use GitWrapper\GitBranches;
-use GitWrapper\GitWrapper;
-
 class VersionBuildAction
 {
     private mixed $api_key;
+
     public mixed $owner;
+
     public mixed $repository;
 
     public function __construct()
@@ -27,7 +26,7 @@ class VersionBuildAction
         }
     }
 
-    private  function getLastTag()
+    private function getLastTag()
     {
         $response = \Http::withToken($this->api_key)
             ->get('https://api.github.com/repos/'.$this->owner.'/'.$this->repository.'/releases/latest');

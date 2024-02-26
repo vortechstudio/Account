@@ -10,7 +10,7 @@ class RailwayEngineShop extends Model
     protected $guarded = [];
 
     protected $casts = [
-        "money" => EngineMoneyEnum::class
+        'money' => EngineMoneyEnum::class,
     ];
 
     public function engine()

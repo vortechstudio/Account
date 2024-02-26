@@ -11,7 +11,9 @@ use Livewire\WithPagination;
 class Home extends Component
 {
     use WithPagination;
+
     public $news;
+
     public $limit = 5;
 
     public function mount()
@@ -22,12 +24,13 @@ class Home extends Component
             ->orderBy('published_at', 'desc')
             ->get();
     }
+
     public function loadMore()
     {
         $this->limit += 5;
     }
 
-    #[Title("Bienvenue")]
+    #[Title('Bienvenue')]
     public function render()
     {
         $news = Article::with('author', 'cercle')
@@ -35,9 +38,10 @@ class Home extends Component
             ->where('published', true)
             ->orderBy('published_at', 'desc')
             ->paginate($this->limit);
+
         //dd($this->news);
         return view('livewire.home', [
-            "articles" => $news
+            'articles' => $news,
         ])->layout('components.layouts.app');
     }
 }

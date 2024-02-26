@@ -12,9 +12,13 @@ use Livewire\Component;
 class App extends Component
 {
     use LivewireAlert;
+
     public $current_password = '';
+
     public $new_password = '';
+
     public $email = '';
+
     public $user;
 
     public function mount()
@@ -26,59 +30,60 @@ class App extends Component
     public function updatePassword()
     {
         $this->validate([
-            "new_password" => "required|min:8",
+            'new_password' => 'required|min:8',
         ]);
 
-        if($this->current_password == $this->new_password) {
-            $this->alert('warning', "Vous ne pouvez pas définir le nouveau mot de passe par son ancien");
+        if ($this->current_password == $this->new_password) {
+            $this->alert('warning', 'Vous ne pouvez pas définir le nouveau mot de passe par son ancien');
         }
 
         auth()->user()->update([
-            "password" => \Hash::make($this->new_password)
+            'password' => \Hash::make($this->new_password),
         ]);
         $this->user->logs()->create([
-            "action" => "Changement de mot de passe"
+            'action' => 'Changement de mot de passe',
         ]);
 
         auth()->user()->notify(new UpdatePasswordNotification($this->user));
 
-        $this->alert("success", "Mot de passe modifier avec succès");
+        $this->alert('success', 'Mot de passe modifier avec succès');
     }
 
     public function updateMail()
     {
         $this->validate([
-            "email" => "required|email"
+            'email' => 'required|email',
         ]);
 
         $this->user->update([
-            "email" => $this->email
+            'email' => $this->email,
         ]);
 
         auth()->user()->notify(new UpdateMailNotification($this->user));
         $this->user->logs()->create([
-            "action" => "Changement de l'adresse Mail"
+            'action' => "Changement de l'adresse Mail",
         ]);
 
-        $this->alert("success", "Adresse Mail modifier avec succès");
+        $this->alert('success', 'Adresse Mail modifier avec succès');
     }
 
     public function closeAccount()
     {
         try {
             $this->user->delete();
-        }catch (\Exception $exception) {
-            \Log::emergency($exception->getMessage(), ["context" => $exception]);
+        } catch (\Exception $exception) {
+            \Log::emergency($exception->getMessage(), ['context' => $exception]);
         }
 
-        $this->alert("success","Compte supprimer avec succès");
+        $this->alert('success', 'Compte supprimer avec succès');
+
         return redirect()->route('auth.login');
     }
 
-    #[Title("Informations")]
+    #[Title('Informations')]
     public function render()
     {
         return view('livewire.account.app')
-            ->layout("components.layouts.app");
+            ->layout('components.layouts.app');
     }
 }

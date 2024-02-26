@@ -4,7 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration {
+return new class extends Migration
+{
     public function up(): void
     {
         Schema::create('railway_ligne_stations', function (Blueprint $table) {
@@ -13,14 +14,14 @@ return new class extends Migration {
             $table->decimal('distance');
 
             $table->foreignId('gare_id')
-               ->constrained("railway_gares")
-               ->cascadeOnUpdate()
-               ->cascadeOnDelete();
+                ->constrained('railway_gares')
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
 
             $table->foreignId('ligne_id')
-               ->constrained("railway_lignes")
-               ->cascadeOnUpdate()
-               ->cascadeOnDelete();
+                ->constrained('railway_lignes')
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
         });
     }
 
