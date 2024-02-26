@@ -19,6 +19,7 @@ class Home extends Component
         $this->news = Article::with('author', 'cercle')
             ->where('type', ArticleTypeEnum::SSO)
             ->where('published', true)
+            ->orderBy('published_at', 'desc')
             ->get();
     }
     public function loadMore()
@@ -32,6 +33,7 @@ class Home extends Component
         $news = Article::with('author', 'cercle')
             ->where('type', ArticleTypeEnum::SSO)
             ->where('published', true)
+            ->orderBy('published_at', 'desc')
             ->paginate($this->limit);
         //dd($this->news);
         return view('livewire.home', [
