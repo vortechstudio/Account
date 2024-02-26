@@ -21,7 +21,7 @@ class Home extends Component
         $this->news = Article::with('author', 'cercle')
             ->where('type', ArticleTypeEnum::SSO)
             ->where('published', true)
-            ->orderBy('published_at', 'desc')
+            ->latest('published_at')
             ->get();
     }
 
@@ -36,7 +36,7 @@ class Home extends Component
         $news = Article::with('author', 'cercle')
             ->where('type', ArticleTypeEnum::SSO)
             ->where('published', true)
-            ->orderBy('published_at', 'desc')
+            ->latest('published_at')
             ->paginate($this->limit);
 
         //dd($this->news);
