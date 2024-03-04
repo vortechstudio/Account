@@ -9640,16 +9640,16 @@
         },
         {
             "name": "vstudio/versionbuildaction",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vortechstudio-packager/VersionBuildAction.git",
-                "reference": "58183d3241bbebce2c72840adce033e17739fdc7"
+                "reference": "53f3e0601c4df4e6d775c7de76ae178784bda09d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vortechstudio-packager/VersionBuildAction/zipball/58183d3241bbebce2c72840adce033e17739fdc7",
-                "reference": "58183d3241bbebce2c72840adce033e17739fdc7",
+                "url": "https://api.github.com/repos/vortechstudio-packager/VersionBuildAction/zipball/53f3e0601c4df4e6d775c7de76ae178784bda09d",
+                "reference": "53f3e0601c4df4e6d775c7de76ae178784bda09d",
                 "shasum": ""
             },
             "require": {
@@ -9703,7 +9703,7 @@
             ],
             "support": {
                 "issues": "https://github.com/vortechstudio-packager/VersionBuildAction/issues",
-                "source": "https://github.com/vortechstudio-packager/VersionBuildAction/tree/1.0.0"
+                "source": "https://github.com/vortechstudio-packager/VersionBuildAction/tree/1.1.0"
             },
             "funding": [
                 {
@@ -9711,7 +9711,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-02-19T16:23:02+00:00"
+            "time": "2024-02-27T18:49:59+00:00"
         },
         {
             "name": "webmozart/assert",
