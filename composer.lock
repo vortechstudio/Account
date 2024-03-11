@@ -2864,16 +2864,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.24.0",
+            "version": "3.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "b25a361508c407563b34fac6f64a8a17a8819675"
+                "reference": "4c44347133618cccd9b3df1729647a1577b4ad99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/b25a361508c407563b34fac6f64a8a17a8819675",
-                "reference": "b25a361508c407563b34fac6f64a8a17a8819675",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/4c44347133618cccd9b3df1729647a1577b4ad99",
+                "reference": "4c44347133618cccd9b3df1729647a1577b4ad99",
                 "shasum": ""
             },
             "require": {
@@ -2901,7 +2901,7 @@
                 "friendsofphp/php-cs-fixer": "^3.5",
                 "google/cloud-storage": "^1.23",
                 "microsoft/azure-storage-blob": "^1.1",
-                "phpseclib/phpseclib": "^3.0.34",
+                "phpseclib/phpseclib": "^3.0.36",
                 "phpstan/phpstan": "^1.10",
                 "phpunit/phpunit": "^9.5.11|^10.0",
                 "sabre/dav": "^4.6.0"
@@ -2938,7 +2938,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.24.0"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.25.0"
             },
             "funding": [
                 {
@@ -2950,7 +2950,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-02-04T12:10:17+00:00"
+            "time": "2024-03-09T17:06:45+00:00"
         },
         {
             "name": "league/flysystem-local",
@@ -4804,7 +4804,7 @@
         },
         {
             "name": "php-flasher/flasher",
-            "version": "v1.15.10",
+            "version": "v1.15.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-flasher/flasher.git",
@@ -4866,7 +4866,7 @@
                 "yoeunes"
             ],
             "support": {
-                "source": "https://github.com/php-flasher/flasher/tree/v1.15.10"
+                "source": "https://github.com/php-flasher/flasher/tree/v1.15.11"
             },
             "funding": [
                 {
@@ -4894,20 +4894,20 @@
         },
         {
             "name": "php-flasher/flasher-laravel",
-            "version": "v1.15.10",
+            "version": "v1.15.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-flasher/flasher-laravel.git",
-                "reference": "18b6ed815a791d483dd90a4f4561abb1b4cdb099"
+                "reference": "2c4ebda9599ec88faa6bb23a6143fedbd9e6b5ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-flasher/flasher-laravel/zipball/18b6ed815a791d483dd90a4f4561abb1b4cdb099",
-                "reference": "18b6ed815a791d483dd90a4f4561abb1b4cdb099",
+                "url": "https://api.github.com/repos/php-flasher/flasher-laravel/zipball/2c4ebda9599ec88faa6bb23a6143fedbd9e6b5ea",
+                "reference": "2c4ebda9599ec88faa6bb23a6143fedbd9e6b5ea",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0",
+                "illuminate/support": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0",
                 "php": ">=5.3",
                 "php-flasher/flasher": "^1.15.9"
             },
@@ -4965,7 +4965,7 @@
                 "yoeunes"
             ],
             "support": {
-                "source": "https://github.com/php-flasher/flasher-laravel/tree/v1.15.10"
+                "source": "https://github.com/php-flasher/flasher-laravel/tree/v1.15.11"
             },
             "funding": [
                 {
@@ -4989,11 +4989,11 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2024-01-21T17:30:21+00:00"
+            "time": "2024-03-07T01:15:58+00:00"
         },
         {
             "name": "php-flasher/flasher-toastr",
-            "version": "v1.15.10",
+            "version": "v1.15.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-flasher/flasher-toastr.git",
@@ -5056,7 +5056,7 @@
                 "yoeunes"
             ],
             "support": {
-                "source": "https://github.com/php-flasher/flasher-toastr/tree/v1.15.10"
+                "source": "https://github.com/php-flasher/flasher-toastr/tree/v1.15.11"
             },
             "funding": [
                 {
@@ -5084,7 +5084,7 @@
         },
         {
             "name": "php-flasher/flasher-toastr-laravel",
-            "version": "v1.15.10",
+            "version": "v1.15.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-flasher/flasher-toastr-laravel.git",
@@ -5155,7 +5155,7 @@
                 "yoeunes"
             ],
             "support": {
-                "source": "https://github.com/php-flasher/flasher-toastr-laravel/tree/v1.15.10"
+                "source": "https://github.com/php-flasher/flasher-toastr-laravel/tree/v1.15.11"
             },
             "funding": [
                 {
