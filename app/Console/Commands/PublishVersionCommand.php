@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Support\Facades\Http;
+use Log;
 
 class PublishVersionCommand extends Command
 {
@@ -37,7 +38,8 @@ class PublishVersionCommand extends Command
 
             return $response[0]->name;
         } catch (HttpResponseException $exception) {
-            dd($exception);
+            Log::error($exception);
+            $this->error('An error occurred while fetching the latest tag.');
         }
     }
 
