@@ -5,8 +5,9 @@
                 <h3 class="card-title">Informations d'abonnées Vortech Studio</h3>
             </div>
             <div class="card-body">
-                <table class="table table-row-bordered border border-2 border-gray-500 table-row-gray-800 gap-5 gy-5 gs-5 w-50 mx-auto align-middle">
-                    <tbody>
+                <div class="table-responsive">
+                    <table class="table table-row-bordered border border-2 border-gray-500 table-row-gray-800 gap-5 gy-5 gs-5 w-50 mx-auto align-middle">
+                        <tbody>
                         <tr>
                             <td class="bg-primary text-light fw-bold">Pays / région d'enregistrement</td>
                             <td>{{ auth()->user()->authentications()->first()->location['country'] }}</td>
@@ -30,8 +31,9 @@
                                 </div>
                             </td>
                         </tr>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <div class="card-footer">
                 <div class="d-flex flex-center">
