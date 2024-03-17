@@ -14,18 +14,20 @@
                 Status de l'authentificateur Vortech Studio
             </div>
             <div class="d-flex justify-content-center mb-5 w-50 mx-auto">
-                <table class="table table-striped table-bordered gap-5 gy-5 gs-5 gx-5 fs-3">
-                    <tbody>
-                    <tr>
-                        <td class="bg-light-info fw-bolder">Code d'identification</td>
-                        <td class="text-end">{{ $user->name }}</td>
-                    </tr>
-                    <tr>
-                        <td class="bg-light-info fw-bold">Authentificateur</td>
-                        <td class="text-end">{!! $user->otp_status !!}</td>
-                    </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered gap-5 gy-5 gs-5 gx-5 fs-3">
+                        <tbody>
+                        <tr>
+                            <td class="bg-light-info fw-bolder">Code d'identification</td>
+                            <td class="text-end">{{ $user->name }}</td>
+                        </tr>
+                        <tr>
+                            <td class="bg-light-info fw-bold">Authentificateur</td>
+                            <td class="text-end">{!! $user->otp_status !!}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             @if($user->two_factor_confirmed_at)
                 <form action="/user/two-factor-authentication" method="POST">

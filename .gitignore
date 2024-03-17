@@ -19,3 +19,4 @@ yarn-error.log
 /.vscode
 /composer.phar
 .auth0.*.json
+qodana.yaml

@@ -73,6 +73,7 @@
                         <div class="text-center mb-11">
                             <!--begin::Title-->
                             <h1 class="text-gray-900 fw-bolder mb-3">Connexion à {{ config('app.name') }}</h1>
+                            {!! \Vortechstudio\VersionBuildAction\Facades\VersionBuildAction::getLabelEnv() !!}
                             <!--end::Title-->
 
                         </div>
