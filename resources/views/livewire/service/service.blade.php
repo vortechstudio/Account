@@ -10,24 +10,26 @@
                 </div>
                 <div class="card-body">
                     @if(count($actifs) != 0)
-                        <table class="table table-striped gap-5 gs-5 gy-5 gx-5">
-                            <thead class="table-dark">
-                            <tr>
-                                <th>Service</th>
-                                <th>Date d'enregistrement</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach($actifs as $actif)
+                        <div class="table-responsive">
+                            <table class="table table-striped gap-5 gs-5 gy-5 gx-5">
+                                <thead class="table-dark">
                                 <tr>
-                                    <td>{{ $actif->service->name }}</td>
-                                    <td>{{ $actif->created_at->isoFormat("LL") }}</td>
+                                    <th>Service</th>
+                                    <th>Date d'enregistrement</th>
                                 </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                @foreach($actifs as $actif)
+                                    <tr>
+                                        <td>{{ $actif->service->name }}</td>
+                                        <td>{{ $actif->created_at->isoFormat("LL") }}</td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     @else
-                        <x-base.is-null />
+                        <x-base.is-null text="Aucun service actuellement actif" />
                     @endif
                 </div>
             </div>
@@ -37,22 +39,24 @@
                 </div>
                 <div class="card-body">
                     @if(count($inactifs) != 0)
-                        <table class="table table-striped gap-5 gs-5 gy-5 gx-5">
-                            <thead class="table-dark">
-                            <tr>
-                                <th>Service</th>
-                                <th>Date de résiliation</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach($inactifs as $inactif)
+                        <div class="table-responsive">
+                            <table class="table table-striped gap-5 gs-5 gy-5 gx-5">
+                                <thead class="table-dark">
                                 <tr>
-                                    <td>{{ $inactif->service->name }}</td>
-                                    <td>{{ $inactif->deleted_at->isoFormat("LL") }}</td>
+                                    <th>Service</th>
+                                    <th>Date de résiliation</th>
                                 </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                @foreach($inactifs as $inactif)
+                                    <tr>
+                                        <td>{{ $inactif->service->name }}</td>
+                                        <td>{{ $inactif->deleted_at->isoFormat("LL") }}</td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     @else
                         <x-base.is-null text="Aucun services actuellement inactif"/>
                     @endif

@@ -46,28 +46,30 @@
         </div>
         <div class="card-body">
             <div class="d-flex flex-center mx-auto w-75 rounded-3">
-                <table class="table table-rounded table-row-bordered table-primary table-striped gap-2 gs-5 gy-5">
-                    <thead>
-                    <tr class="fw-bolder fs-3">
-                        <x-base.table-header :direction="$orderDirection" name="login_at" :field="$orderField">Date</x-base.table-header>
-                        <th>Appareil</th>
-                        <x-base.table-header :direction="$orderDirection" name="ip_address" :field="$orderField">Adresse IP</x-base.table-header>
-                        <th>Pays</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($logs as $log)
-                        <tr>
-                            <td>{{ $log->login_at ? $log->login_at->isoFormat("LLLL") : $log->logout_at->isoFormat("LLLL") }}</td>
-                            <td>
-                                {{ \IvanoMatteo\LaravelDeviceTracking\Models\Device::query()->where('ip', $log->ip_address)->first()->device_type }}
-                            </td>
-                            <td>{{ $log->ip_address }}</td>
-                            <td>{{ $log->location ? $log->location['country'] : '' }}</td>
+                <div class="table-responsive">
+                    <table class="table table-rounded table-row-bordered table-primary table-striped gap-2 gs-5 gy-5">
+                        <thead>
+                        <tr class="fw-bolder fs-3">
+                            <x-base.table-header :direction="$orderDirection" name="login_at" :field="$orderField">Date</x-base.table-header>
+                            <th>Appareil</th>
+                            <x-base.table-header :direction="$orderDirection" name="ip_address" :field="$orderField">Adresse IP</x-base.table-header>
+                            <th>Pays</th>
                         </tr>
-                    @endforeach
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                        @foreach($logs as $log)
+                            <tr>
+                                <td>{{ $log->login_at ? $log->login_at->isoFormat("LLLL") : $log->logout_at->isoFormat("LLLL") }}</td>
+                                <td>
+                                    {{ \IvanoMatteo\LaravelDeviceTracking\Models\Device::query()->where('ip', $log->ip_address)->first()->device_type }}
+                                </td>
+                                <td>{{ $log->ip_address }}</td>
+                                <td>{{ $log->location ? $log->location['country'] : '' }}</td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                </div>
                 {{ $logs->links() }}
             </div>
         </div>
