@@ -29,7 +29,7 @@
                 <div class="app-navbar-item" id="kt_header_user_menu_toggle">
                     <!--begin::Menu wrapper-->
                     <div class="cursor-pointer symbol symbol-35px symbol-lg-50px" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
-                        <img src="{{ auth()->user()->socials()->first()->avatar }}" alt="user" />
+                        <img src="{{ auth()->user()->socials()->first()->avatar ?? Storage::url('user/default/profil.png') }}" alt="user" />
                         <div class="position-absolute translate-middle bottom-0 start-100  bg-success rounded-circle border border-4 border-body h-20px w-20px"></div>
                     </div>
                     <!--begin::User account menu-->
@@ -39,7 +39,7 @@
                             <div class="menu-content d-flex align-items-center px-3">
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-50px me-5">
-                                    <img alt="Logo" src="{{ auth()->user()->socials()->first()->avatar }}" />
+                                    <img alt="Logo" src="{{ auth()->user()->socials()->first()->avatar ?? Storage::url('user/default/profil.png') }}" />
                                 </div>
                                 <!--end::Avatar-->
                                 <!--begin::Username-->

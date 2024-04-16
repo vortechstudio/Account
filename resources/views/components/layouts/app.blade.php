@@ -51,7 +51,7 @@
                                         <div class="d-flex align-items-center mb-13">
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol- symbol-70px me-6">
-                                                <img src="{{ auth()->user()->socials()->first()->avatar }}" class="" alt="" />
+                                                <img src="{{ auth()->user()->socials()->first()->avatar ?? Storage::url('user/default/profil.png')}}" class="" alt="" />
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Info-->
