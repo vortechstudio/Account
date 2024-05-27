@@ -4382,16 +4382,16 @@
         },
         {
             "name": "pharaonic/laravel-modulator",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Pharaonic/laravel-modulator.git",
-                "reference": "97e3461dc99a9239bf4de1ee84cb4f0b35dec5bf"
+                "reference": "18933886f55112d434fc9fcfea17cf18c2732631"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Pharaonic/laravel-modulator/zipball/97e3461dc99a9239bf4de1ee84cb4f0b35dec5bf",
-                "reference": "97e3461dc99a9239bf4de1ee84cb4f0b35dec5bf",
+                "url": "https://api.github.com/repos/Pharaonic/laravel-modulator/zipball/18933886f55112d434fc9fcfea17cf18c2732631",
+                "reference": "18933886f55112d434fc9fcfea17cf18c2732631",
                 "shasum": ""
             },
             "require": {
@@ -4434,9 +4434,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Pharaonic/laravel-modulator/issues",
-                "source": "https://github.com/Pharaonic/laravel-modulator/tree/1.4.0"
+                "source": "https://github.com/Pharaonic/laravel-modulator/tree/1.5.0"
             },
-            "time": "2024-02-05T21:46:24+00:00"
+            "time": "2024-05-24T09:20:24+00:00"
         },
         {
             "name": "pharaonic/laravel-pages",
