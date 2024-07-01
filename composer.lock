@@ -3633,16 +3633,16 @@
         },
         {
             "name": "multicaret/laravel-acquaintances",
-            "version": "v3.6.0",
+            "version": "v3.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/multicaret/laravel-acquaintances.git",
-                "reference": "31d5b85c544f24dd68f93d8594c218d9627d19a3"
+                "reference": "ae1c4aebe2137cc5c89072e2124e99e8843cdf64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/multicaret/laravel-acquaintances/zipball/31d5b85c544f24dd68f93d8594c218d9627d19a3",
-                "reference": "31d5b85c544f24dd68f93d8594c218d9627d19a3",
+                "url": "https://api.github.com/repos/multicaret/laravel-acquaintances/zipball/ae1c4aebe2137cc5c89072e2124e99e8843cdf64",
+                "reference": "ae1c4aebe2137cc5c89072e2124e99e8843cdf64",
                 "shasum": ""
             },
             "require": {
@@ -3697,9 +3697,9 @@
             ],
             "support": {
                 "issues": "https://github.com/multicaret/laravel-acquaintances/issues",
-                "source": "https://github.com/multicaret/laravel-acquaintances/tree/v3.6.0"
+                "source": "https://github.com/multicaret/laravel-acquaintances/tree/v3.6.1"
             },
-            "time": "2024-03-19T00:04:45+00:00"
+            "time": "2024-06-08T13:48:12+00:00"
         },
         {
             "name": "mustangostang/spyc",
