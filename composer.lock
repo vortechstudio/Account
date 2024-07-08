@@ -742,16 +742,16 @@
         },
         {
             "name": "dflydev/dot-access-data",
-            "version": "v3.0.2",
+            "version": "v3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dflydev/dflydev-dot-access-data.git",
-                "reference": "f41715465d65213d644d3141a6a93081be5d3549"
+                "reference": "a23a2bf4f31d3518f3ecb38660c95715dfead60f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dflydev/dflydev-dot-access-data/zipball/f41715465d65213d644d3141a6a93081be5d3549",
-                "reference": "f41715465d65213d644d3141a6a93081be5d3549",
+                "url": "https://api.github.com/repos/dflydev/dflydev-dot-access-data/zipball/a23a2bf4f31d3518f3ecb38660c95715dfead60f",
+                "reference": "a23a2bf4f31d3518f3ecb38660c95715dfead60f",
                 "shasum": ""
             },
             "require": {
@@ -811,9 +811,9 @@
             ],
             "support": {
                 "issues": "https://github.com/dflydev/dflydev-dot-access-data/issues",
-                "source": "https://github.com/dflydev/dflydev-dot-access-data/tree/v3.0.2"
+                "source": "https://github.com/dflydev/dflydev-dot-access-data/tree/v3.0.3"
             },
-            "time": "2022-10-27T11:44:00+00:00"
+            "time": "2024-07-08T12:26:09+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -3258,16 +3258,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.5.1",
+            "version": "v3.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "da044261bb5c5449397f18fda3409f14acf47c0a"
+                "reference": "636725c1f87bc7844dd80277488268db27eec1aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/da044261bb5c5449397f18fda3409f14acf47c0a",
-                "reference": "da044261bb5c5449397f18fda3409f14acf47c0a",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/636725c1f87bc7844dd80277488268db27eec1aa",
+                "reference": "636725c1f87bc7844dd80277488268db27eec1aa",
                 "shasum": ""
             },
             "require": {
@@ -3322,7 +3322,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.5.1"
+                "source": "https://github.com/livewire/livewire/tree/v3.5.2"
             },
             "funding": [
                 {
@@ -3330,7 +3330,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-06-18T11:10:42+00:00"
+            "time": "2024-07-03T17:22:45+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -6531,16 +6531,16 @@
         },
         {
             "name": "rappasoft/laravel-livewire-tables",
-            "version": "v3.2.7",
+            "version": "v3.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rappasoft/laravel-livewire-tables.git",
-                "reference": "cd723c1fcf22898c0620328a8a26493b521ea905"
+                "reference": "1099d17385d5f247543e77e4cb535d57d14540cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rappasoft/laravel-livewire-tables/zipball/cd723c1fcf22898c0620328a8a26493b521ea905",
-                "reference": "cd723c1fcf22898c0620328a8a26493b521ea905",
+                "url": "https://api.github.com/repos/rappasoft/laravel-livewire-tables/zipball/1099d17385d5f247543e77e4cb535d57d14540cd",
+                "reference": "1099d17385d5f247543e77e4cb535d57d14540cd",
                 "shasum": ""
             },
             "require": {
@@ -6553,10 +6553,10 @@
             "require-dev": {
                 "brianium/paratest": "^5.0|^6.0|^7.0|^8.0",
                 "ext-sqlite3": "*",
+                "larastan/larastan": "^2.6",
                 "laravel/pint": "^1.10",
                 "monolog/monolog": "*",
                 "nunomaduro/collision": "^6.0|^7.0|^8.0",
-                "nunomaduro/larastan": "^2.6",
                 "orchestra/testbench": "^7.0|^8.0|^9.0",
                 "phpunit/phpunit": "^9.0|^10.0|^11.0"
             },
@@ -6600,7 +6600,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rappasoft/laravel-livewire-tables/issues",
-                "source": "https://github.com/rappasoft/laravel-livewire-tables/tree/v3.2.7"
+                "source": "https://github.com/rappasoft/laravel-livewire-tables/tree/v3.2.8"
             },
             "funding": [
                 {
@@ -6608,7 +6608,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-06-06T01:19:34+00:00"
+            "time": "2024-07-03T22:25:07+00:00"
         },
         {
             "name": "reecem/mocker",
