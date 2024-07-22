@@ -6746,16 +6746,16 @@
         },
         {
             "name": "salahhusa9/laravel-updater",
-            "version": "v1.2.2",
+            "version": "v1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/salahhusa9/laravel-updater.git",
-                "reference": "e9fe040424c044f74a0a4359fc39d94673afe928"
+                "reference": "ea44706f358a426faba1207f85ac7aa240c9a09e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/salahhusa9/laravel-updater/zipball/e9fe040424c044f74a0a4359fc39d94673afe928",
-                "reference": "e9fe040424c044f74a0a4359fc39d94673afe928",
+                "url": "https://api.github.com/repos/salahhusa9/laravel-updater/zipball/ea44706f358a426faba1207f85ac7aa240c9a09e",
+                "reference": "ea44706f358a426faba1207f85ac7aa240c9a09e",
                 "shasum": ""
             },
             "require": {
@@ -6817,7 +6817,7 @@
             ],
             "support": {
                 "issues": "https://github.com/salahhusa9/laravel-updater/issues",
-                "source": "https://github.com/salahhusa9/laravel-updater/tree/v1.2.2"
+                "source": "https://github.com/salahhusa9/laravel-updater/tree/v1.2.3"
             },
             "funding": [
                 {
@@ -6825,7 +6825,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-06-25T15:28:20+00:00"
+            "time": "2024-07-17T20:24:58+00:00"
         },
         {
             "name": "silviolleite/laravelpwa",
@@ -12026,16 +12026,16 @@
         },
         {
             "name": "spatie/backtrace",
-            "version": "1.6.1",
+            "version": "1.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/backtrace.git",
-                "reference": "8373b9d51638292e3bfd736a9c19a654111b4a23"
+                "reference": "1a9a145b044677ae3424693f7b06479fc8c137a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/backtrace/zipball/8373b9d51638292e3bfd736a9c19a654111b4a23",
-                "reference": "8373b9d51638292e3bfd736a9c19a654111b4a23",
+                "url": "https://api.github.com/repos/spatie/backtrace/zipball/1a9a145b044677ae3424693f7b06479fc8c137a9",
+                "reference": "1a9a145b044677ae3424693f7b06479fc8c137a9",
                 "shasum": ""
             },
             "require": {
@@ -12073,7 +12073,7 @@
                 "spatie"
             ],
             "support": {
-                "source": "https://github.com/spatie/backtrace/tree/1.6.1"
+                "source": "https://github.com/spatie/backtrace/tree/1.6.2"
             },
             "funding": [
                 {
@@ -12085,7 +12085,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2024-04-24T13:22:11+00:00"
+            "time": "2024-07-22T08:21:24+00:00"
         },
         {
             "name": "spatie/error-solutions",
