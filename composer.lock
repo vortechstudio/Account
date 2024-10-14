@@ -4274,16 +4274,16 @@
         },
         {
             "name": "pharaonic/laravel-categorizable",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Pharaonic/laravel-categorizable.git",
-                "reference": "20ec6df92d928aab81a68232c1e88c0cd0cff84b"
+                "reference": "18723a3cf892dac5dd4b4168d9b3ba9d6fd471d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Pharaonic/laravel-categorizable/zipball/20ec6df92d928aab81a68232c1e88c0cd0cff84b",
-                "reference": "20ec6df92d928aab81a68232c1e88c0cd0cff84b",
+                "url": "https://api.github.com/repos/Pharaonic/laravel-categorizable/zipball/18723a3cf892dac5dd4b4168d9b3ba9d6fd471d7",
+                "reference": "18723a3cf892dac5dd4b4168d9b3ba9d6fd471d7",
                 "shasum": ""
             },
             "require": {
@@ -4325,9 +4325,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Pharaonic/laravel-categorizable/issues",
-                "source": "https://github.com/Pharaonic/laravel-categorizable/tree/1.1.0"
+                "source": "https://github.com/Pharaonic/laravel-categorizable/tree/1.1.1"
             },
-            "time": "2023-10-14T04:19:56+00:00"
+            "time": "2024-10-11T17:54:41+00:00"
         },
         {
             "name": "pharaonic/laravel-helpers",
