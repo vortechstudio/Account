@@ -3263,16 +3263,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.5.12",
+            "version": "v3.5.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "3c8d1f9d7d9098aaea663093ae168f2d5d2ae73d"
+                "reference": "0b842088d716cadaf9d94fc4f096bc688db29d65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/3c8d1f9d7d9098aaea663093ae168f2d5d2ae73d",
-                "reference": "3c8d1f9d7d9098aaea663093ae168f2d5d2ae73d",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/0b842088d716cadaf9d94fc4f096bc688db29d65",
+                "reference": "0b842088d716cadaf9d94fc4f096bc688db29d65",
                 "shasum": ""
             },
             "require": {
@@ -3298,12 +3298,12 @@
             "type": "library",
             "extra": {
                 "laravel": {
-                    "providers": [
-                        "Livewire\\LivewireServiceProvider"
-                    ],
                     "aliases": {
                         "Livewire": "Livewire\\Livewire"
-                    }
+                    },
+                    "providers": [
+                        "Livewire\\LivewireServiceProvider"
+                    ]
                 }
             },
             "autoload": {
@@ -3327,7 +3327,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.5.12"
+                "source": "https://github.com/livewire/livewire/tree/v3.5.16"
             },
             "funding": [
                 {
@@ -3335,7 +3335,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-10-15T19:35:06+00:00"
+            "time": "2024-12-02T15:57:58+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -6537,16 +6537,16 @@
         },
         {
             "name": "rappasoft/laravel-livewire-tables",
-            "version": "v3.5.5",
+            "version": "v3.5.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rappasoft/laravel-livewire-tables.git",
-                "reference": "59eaa7be056fedf7ce7f82b297f2c355ecdbfb88"
+                "reference": "a28d2d8d75d81d478bdf01e5d406c948250310c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rappasoft/laravel-livewire-tables/zipball/59eaa7be056fedf7ce7f82b297f2c355ecdbfb88",
-                "reference": "59eaa7be056fedf7ce7f82b297f2c355ecdbfb88",
+                "url": "https://api.github.com/repos/rappasoft/laravel-livewire-tables/zipball/a28d2d8d75d81d478bdf01e5d406c948250310c6",
+                "reference": "a28d2d8d75d81d478bdf01e5d406c948250310c6",
                 "shasum": ""
             },
             "require": {
@@ -6606,7 +6606,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rappasoft/laravel-livewire-tables/issues",
-                "source": "https://github.com/rappasoft/laravel-livewire-tables/tree/v3.5.5"
+                "source": "https://github.com/rappasoft/laravel-livewire-tables/tree/v3.5.7"
             },
             "funding": [
                 {
@@ -6614,7 +6614,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-22T02:04:35+00:00"
+            "time": "2024-12-01T03:55:57+00:00"
         },
         {
             "name": "reecem/mocker",
